@@ -1,0 +1,75 @@
+/* Viewport, transport et timeline */
+.vp-toolbar { display: flex; align-items: center; gap: 4px; padding: 4px 8px; border-bottom: 1px solid var(--border); background: var(--panel); flex: none; overflow-x: auto; scrollbar-width: none; }
+.vp-toolbar .sep { width: 1px; height: 18px; background: var(--border); margin: 0 4px; }
+.vp-toolbar select.input { height: 24px; font-size: var(--fs-sm); }
+#viewport { position: relative; flex: 1; min-height: 0; overflow: hidden; background: #070707; background-image: radial-gradient(#141414 1px, transparent 1px); background-size: 16px 16px; }
+#viewport .stage { position: absolute; transform-origin: 0 0; }
+#viewport .stage.checker { background-color: #1a1a1a; background-image: linear-gradient(45deg, #262626 25%, transparent 25%), linear-gradient(-45deg, #262626 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #262626 75%), linear-gradient(-45deg, transparent 75%, #262626 75%); background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0; }
+#viewport canvas.main { position: absolute; inset: 0; width: 100%; height: 100%; box-shadow: 0 0 0 1px #2a2a2a, 0 20px 60px #000; }
+#viewport canvas.overlay { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+#viewport .hud { position: absolute; left: 8px; bottom: 8px; display: flex; gap: 6px; pointer-events: none; }
+#viewport .hud .chip { background: #000000B0; }
+#viewport.tool-hand { cursor: grab; }
+#viewport.tool-text { cursor: text; }
+#viewport.tool-rect, #viewport.tool-ellipse, #viewport.tool-pen { cursor: crosshair; }
+#viewport .text-edit { position: absolute; z-index: 5; background: #000000CC; color: #fff; border: 1px solid var(--accent); border-radius: 4px; outline: none; padding: 4px; font-family: var(--font); resize: none; }
+
+#transport { display: flex; align-items: center; gap: 4px; padding: 0 10px; background: var(--panel); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+#timecode { font-family: var(--mono); font-size: 15px; color: var(--accent); min-width: 108px; text-align: center; letter-spacing: 0.04em; text-shadow: 0 0 10px var(--accent-halo); background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 2px 8px; }
+.transport-dur { font-family: var(--mono); color: var(--text-2); font-size: var(--fs-sm); }
+#transport .btn.play { width: 34px; height: 30px; }
+#transport .btn.play.active svg { color: var(--accent); }
+
+#timeline { display: grid; grid-template-columns: var(--heads-w, 190px) 1fr; grid-template-rows: 28px 1fr; background: var(--panel); position: relative; user-select: none; }
+.tl-corner { grid-row: 1; grid-column: 1; display: flex; align-items: center; gap: 2px; padding: 0 6px; border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); }
+.tl-ruler { grid-row: 1; grid-column: 2; position: relative; border-bottom: 1px solid var(--border); overflow: hidden; cursor: ew-resize; }
+.tl-ruler canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.tl-heads { grid-row: 2; grid-column: 1; overflow: hidden; border-right: 1px solid var(--border); position: relative; }
+.tl-body { grid-row: 2; grid-column: 2; overflow: auto; position: relative; }
+.tl-content { position: relative; min-height: 100%; }
+.tl-head { display: flex; align-items: center; gap: 2px; padding: 0 4px 0 0; border-bottom: 1px solid var(--border); background: var(--panel); position: relative; }
+.tl-head .color { width: 4px; align-self: stretch; }
+.tl-head .name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: var(--fs-sm); padding-left: 4px; cursor: grab; }
+.tl-head .name input { width: 100%; }
+.tl-head .btn.sm { height: 18px; width: 18px; color: var(--text-3); }
+.tl-head .btn.sm.on { color: var(--accent); }
+.tl-head.drop-target { box-shadow: inset 0 2px 0 var(--accent); }
+.tl-head.sel { background: var(--panel-2); }
+.tl-track { position: relative; border-bottom: 1px solid var(--border); background: #0A0A0A; }
+.tl-track:nth-child(even) { background: #0B0B0B; }
+.tl-track.locked { background-image: repeating-linear-gradient(45deg, transparent 0 8px, #ffffff06 8px 16px); }
+.tl-track.drop-hover { background: #0f1f15; }
+.tl-clip { position: absolute; top: 3px; bottom: 3px; border-radius: 5px; background: color-mix(in srgb, var(--clip-color, #24D26D) 22%, #101010); border: 1px solid color-mix(in srgb, var(--clip-color, #24D26D) 60%, #000); overflow: hidden; cursor: grab; display: flex; flex-direction: column; min-width: 4px; }
+.tl-clip:hover { border-color: var(--clip-color, #24D26D); }
+.tl-clip.sel { border-color: #fff; box-shadow: 0 0 0 1px var(--accent), 0 0 12px var(--accent-halo); z-index: 2; }
+.tl-clip.locked { opacity: 0.6; cursor: not-allowed; }
+.tl-clip .label { display: flex; gap: 4px; align-items: center; font-size: 10px; font-weight: 600; padding: 2px 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #fff; text-shadow: 0 1px 2px #000; position: relative; z-index: 2; pointer-events: none; }
+.tl-clip .label .badge { font-size: 8px; }
+.tl-clip canvas.wave, .tl-clip .filmstrip { position: absolute; left: 0; right: 0; bottom: 0; top: 14px; width: 100%; height: calc(100% - 14px); pointer-events: none; opacity: 0.85; }
+.tl-clip .filmstrip { display: flex; overflow: hidden; }
+.tl-clip .filmstrip img { height: 100%; flex: none; opacity: 0.8; }
+.tl-clip .handle { position: absolute; top: 0; bottom: 0; width: 7px; cursor: ew-resize; z-index: 3; }
+.tl-clip .handle.l { left: 0; }
+.tl-clip .handle.r { right: 0; }
+.tl-clip .handle:hover { background: #ffffff30; }
+.tl-clip .trans { position: absolute; top: 0; bottom: 0; background: linear-gradient(90deg, #ffffff30, transparent); pointer-events: auto; z-index: 2; cursor: ew-resize; border-right: 1px dashed #ffffff60; }
+.tl-clip .trans.out { background: linear-gradient(270deg, #ffffff30, transparent); border-right: 0; border-left: 1px dashed #ffffff60; }
+.tl-clip .kf { position: absolute; bottom: 2px; width: 9px; height: 9px; margin-left: -4.5px; transform: rotate(45deg); background: #fff; border: 1px solid #000; z-index: 4; cursor: pointer; }
+.tl-clip .kf.sel { background: var(--accent); box-shadow: 0 0 6px var(--accent); }
+.tl-clip .kf.hold { border-radius: 0; background: #E0A526; }
+.tl-clip .kf.ease { border-radius: 50%; transform: none; }
+.tl-clip .vol { position: absolute; left: 0; right: 0; height: 0; border-top: 1px solid #ffcf5c; z-index: 3; pointer-events: none; }
+#playhead { position: absolute; top: 0; bottom: 0; width: 1px; background: var(--accent); box-shadow: 0 0 8px var(--accent); pointer-events: none; z-index: 20; }
+#playhead::before { content: ''; position: absolute; top: -28px; left: -6px; border: 6px solid transparent; border-top: 9px solid var(--accent); }
+.tl-marker { position: absolute; top: 0; width: 0; height: 100%; z-index: 5; }
+.tl-marker .flag { position: absolute; top: 2px; left: -5px; width: 10px; height: 12px; clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%); cursor: pointer; pointer-events: auto; }
+.tl-marker .line { position: absolute; top: 0; bottom: 0; width: 1px; opacity: 0.35; }
+.tl-workarea { position: absolute; top: 0; height: 5px; background: var(--accent-halo); border-bottom: 2px solid var(--accent); z-index: 3; }
+.tl-cachebar { position: absolute; bottom: 0; height: 3px; left: 0; right: 0; z-index: 3; }
+.tl-lasso { position: absolute; border: 1px solid var(--accent); background: var(--accent-halo); z-index: 30; pointer-events: none; }
+.tl-snapline { position: absolute; top: 0; bottom: 0; width: 1px; background: #fff; box-shadow: 0 0 6px #fff; z-index: 25; pointer-events: none; }
+.tl-zoom { width: 110px; }
+#graph-editor { position: absolute; inset: 28px 0 0 var(--heads-w, 190px); background: #070707; z-index: 40; border-top: 1px solid var(--border); display: none; }
+#graph-editor.open { display: block; }
+#graph-editor canvas { width: 100%; height: 100%; display: block; cursor: crosshair; }
+#graph-editor .ge-bar { position: absolute; top: 6px; left: 8px; display: flex; gap: 6px; align-items: center; z-index: 2; }

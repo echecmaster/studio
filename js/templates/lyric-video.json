@@ -1,0 +1,478 @@
+{
+  "id": "lyric-video",
+  "name": "Lyric video",
+  "description": "Paroles synchronisées mot par mot sur un fond plasma réactif.",
+  "thumbTime": 1.8,
+  "project": {
+    "version": 1,
+    "id": "tpl_lyric-video",
+    "meta": {
+      "name": "Lyric video",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration": 10,
+      "background": "#0a0014",
+      "sampleRate": 48000
+    },
+    "assets": [],
+    "tracks": [
+      {
+        "id": "trk_miyjsersro81u",
+        "type": "text",
+        "name": "Texte 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 0,
+        "color": "#24D26D",
+        "height": 48
+      },
+      {
+        "id": "trk_miyjsm33wwo1v",
+        "type": "video",
+        "name": "Vidéo 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 1,
+        "color": "#3D8BFF",
+        "height": 48
+      },
+      {
+        "id": "trk_miyjsyf9wom1w",
+        "type": "audio",
+        "name": "Audio 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 2,
+        "color": "#E0A526",
+        "height": 48
+      }
+    ],
+    "clips": [
+      {
+        "id": "clp_miyjs089v6c1x",
+        "trackId": "trk_miyjsm33wwo1v",
+        "kind": "generator",
+        "name": "Plasma",
+        "start": 0,
+        "duration": 10,
+        "transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "type": "plasma",
+          "params": {
+            "scale": 3,
+            "speed": 0.6,
+            "saturation": 0.35
+          },
+          "width": 1920,
+          "height": 1080
+        },
+        "effects": [
+          {
+            "id": "fx_miyjsmza3xd1y",
+            "type": "brightness",
+            "enabled": true,
+            "params": {
+              "amount": -0.45
+            }
+          },
+          {
+            "id": "fx_miyjskbdr4d1z",
+            "type": "gaussianBlur",
+            "enabled": true,
+            "params": {
+              "radius": 30
+            }
+          }
+        ],
+        "blendMode": "normal",
+        "keyframes": {},
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyjtqmymuq20",
+        "trackId": "trk_miyjsersro81u",
+        "kind": "text",
+        "name": "Paroles 1",
+        "start": 0,
+        "duration": 3.2,
+        "transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "text": "On danse sous la pluie",
+          "fontFamily": "Inter",
+          "fontSize": 96,
+          "fontWeight": 800,
+          "italic": false,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "kerning": true,
+          "align": "center",
+          "color": "#EDEDED",
+          "textTransform": "none",
+          "fill": {
+            "type": "solid",
+            "stops": [
+              {
+                "o": 0,
+                "c": "#24D26D"
+              },
+              {
+                "o": 1,
+                "c": "#0B3DFF"
+              }
+            ],
+            "angle": 90
+          },
+          "stroke": {
+            "enabled": false,
+            "color": "#050505",
+            "width": 6
+          },
+          "shadow": {
+            "enabled": true,
+            "color": "#000000AA",
+            "blur": 24,
+            "x": 0,
+            "y": 6
+          },
+          "extrude": {
+            "enabled": false,
+            "depth": 14,
+            "color": "#0F3D22",
+            "angle": 135
+          },
+          "maxWidth": 0,
+          "onPath": null,
+          "animator": {
+            "by": "word",
+            "direction": "in",
+            "start": 0,
+            "duration": 1.6,
+            "stagger": 0.25,
+            "easing": "easeOutCubic",
+            "amount": 1,
+            "random": false,
+            "type": "wave"
+          },
+          "background": {
+            "enabled": false,
+            "color": "#050505CC",
+            "padding": 24,
+            "radius": 12
+          }
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {},
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": {
+          "type": "blurFade",
+          "duration": 0.4,
+          "easing": "easeInOutCubic",
+          "params": {
+            "radius": 40
+          }
+        },
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyjusikjve22",
+        "trackId": "trk_miyjsersro81u",
+        "kind": "text",
+        "name": "Paroles 2",
+        "start": 3.2,
+        "duration": 3.2,
+        "transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "text": "les néons au-dessus de nous",
+          "fontFamily": "Inter",
+          "fontSize": 96,
+          "fontWeight": 800,
+          "italic": false,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "kerning": true,
+          "align": "center",
+          "color": "#EDEDED",
+          "textTransform": "none",
+          "fill": {
+            "type": "solid",
+            "stops": [
+              {
+                "o": 0,
+                "c": "#24D26D"
+              },
+              {
+                "o": 1,
+                "c": "#0B3DFF"
+              }
+            ],
+            "angle": 90
+          },
+          "stroke": {
+            "enabled": false,
+            "color": "#050505",
+            "width": 6
+          },
+          "shadow": {
+            "enabled": true,
+            "color": "#000000AA",
+            "blur": 24,
+            "x": 0,
+            "y": 6
+          },
+          "extrude": {
+            "enabled": false,
+            "depth": 14,
+            "color": "#0F3D22",
+            "angle": 135
+          },
+          "maxWidth": 0,
+          "onPath": null,
+          "animator": {
+            "by": "word",
+            "direction": "in",
+            "start": 0,
+            "duration": 1.6,
+            "stagger": 0.25,
+            "easing": "easeOutCubic",
+            "amount": 1,
+            "random": false,
+            "type": "wave"
+          },
+          "background": {
+            "enabled": false,
+            "color": "#050505CC",
+            "padding": 24,
+            "radius": 12
+          }
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {},
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": {
+          "type": "blurFade",
+          "duration": 0.4,
+          "easing": "easeInOutCubic",
+          "params": {
+            "radius": 40
+          }
+        },
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyjv8cgz9r24",
+        "trackId": "trk_miyjsersro81u",
+        "kind": "text",
+        "name": "Paroles 3",
+        "start": 6.4,
+        "duration": 3.2,
+        "transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "text": "rien ne peut nous arrêter",
+          "fontFamily": "Inter",
+          "fontSize": 96,
+          "fontWeight": 800,
+          "italic": false,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "kerning": true,
+          "align": "center",
+          "color": "#EDEDED",
+          "textTransform": "none",
+          "fill": {
+            "type": "solid",
+            "stops": [
+              {
+                "o": 0,
+                "c": "#24D26D"
+              },
+              {
+                "o": 1,
+                "c": "#0B3DFF"
+              }
+            ],
+            "angle": 90
+          },
+          "stroke": {
+            "enabled": false,
+            "color": "#050505",
+            "width": 6
+          },
+          "shadow": {
+            "enabled": true,
+            "color": "#000000AA",
+            "blur": 24,
+            "x": 0,
+            "y": 6
+          },
+          "extrude": {
+            "enabled": false,
+            "depth": 14,
+            "color": "#0F3D22",
+            "angle": 135
+          },
+          "maxWidth": 0,
+          "onPath": null,
+          "animator": {
+            "by": "word",
+            "direction": "in",
+            "start": 0,
+            "duration": 1.6,
+            "stagger": 0.25,
+            "easing": "easeOutCubic",
+            "amount": 1,
+            "random": false,
+            "type": "wave"
+          },
+          "background": {
+            "enabled": false,
+            "color": "#050505CC",
+            "padding": 24,
+            "radius": 12
+          }
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {},
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": {
+          "type": "blurFade",
+          "duration": 0.4,
+          "easing": "easeInOutCubic",
+          "params": {
+            "radius": 40
+          }
+        },
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      }
+    ],
+    "markers": [
+      {
+        "id": "mk_miyjtxzta9621",
+        "t": 0,
+        "label": "Couplet 1",
+        "color": "#24D26D"
+      },
+      {
+        "id": "mk_miyjumlylb723",
+        "t": 3.2,
+        "label": "Couplet 2",
+        "color": "#24D26D"
+      },
+      {
+        "id": "mk_miyjwnariw725",
+        "t": 6.4,
+        "label": "Couplet 3",
+        "color": "#24D26D"
+      }
+    ],
+    "workArea": {
+      "in": 0,
+      "out": 10
+    },
+    "presets": [],
+    "luts": []
+  }
+}

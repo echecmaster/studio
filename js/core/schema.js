@@ -159,6 +159,7 @@ export function validate(schema, value, path = '$', errors = []) {
   if (isObj(value)) {
     for (const r of schema.required || []) if (value[r] === undefined) errors.push(`${path}.${r} : requis`);
     for (const [k, v] of Object.entries(value)) {
+      if (v === undefined) continue;
       if (schema.properties && schema.properties[k]) validate(schema.properties[k], v, `${path}.${k}`, errors);
       else if (schema.additionalProperties === false) errors.push(`${path}.${k} : propriété inconnue`);
       else if (isObj(schema.additionalProperties)) validate(schema.additionalProperties, v, `${path}.${k}`, errors);

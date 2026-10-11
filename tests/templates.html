@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Templates — planche</title><link rel="stylesheet" href="../css/fonts.css"></head>
+<body style="background:#050505;margin:0"><canvas id="sheet"></canvas>
+<script type="module">
+import { Renderer } from '../js/render/renderer.js';
+import { TEMPLATES } from '../js/templates/templates.generated.js';
+await document.fonts.load('900 40px Inter'); await document.fonts.ready;
+const cols = 4, cw = 400, ch = 225;
+const sheet = document.getElementById('sheet'); sheet.width = cols * cw; sheet.height = Math.ceil(TEMPLATES.length / cols) * (ch + 20);
+const sctx = sheet.getContext('2d');
+const c = new OffscreenCanvas(cw, ch);
+const r = new Renderer(c, { offscreen: true, log: (l, m) => errors.push(m) });
+const errors = [];
+const q = new URLSearchParams(location.search);
+TEMPLATES.forEach((t, i) => {
+  const p = t.project;
+  const w = p.meta.width > p.meta.height ? cw : Math.round(ch * p.meta.width / p.meta.height);
+  r.resize(w, ch);
+  r.render(p, q.get('t') ? +q.get('t') * p.meta.duration : t.thumbTime, {});
+  const x = (i % cols) * cw, y = Math.floor(i / cols) * (ch + 20);
+  sctx.drawImage(r.canvas, x + (cw - w) / 2, y);
+  sctx.fillStyle = '#24D26D'; sctx.font = '12px sans-serif'; sctx.fillText(t.name, x + 4, y + ch + 14);
+});
+window.__result = { errors };
+</script></body></html>

@@ -1,0 +1,354 @@
+{
+  "id": "countdown",
+  "name": "Compte à rebours",
+  "description": "Décompte 5→0 avec anneau de progression et flash final.",
+  "thumbTime": 2.3,
+  "project": {
+    "version": 1,
+    "id": "tpl_countdown",
+    "meta": {
+      "name": "Compte à rebours",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration": 6,
+      "background": "#050505",
+      "sampleRate": 48000
+    },
+    "assets": [],
+    "tracks": [
+      {
+        "id": "trk_miyk0kshmkh2d",
+        "type": "shape",
+        "name": "Formes 2",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 0,
+        "color": "#B05CFF",
+        "height": 48,
+        "groupId": null,
+        "collapsed": false
+      },
+      {
+        "id": "trk_miyjx6de1j82b",
+        "type": "shape",
+        "name": "Formes 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 1,
+        "color": "#B05CFF",
+        "height": 48,
+        "groupId": null,
+        "collapsed": false
+      },
+      {
+        "id": "trk_miyjx5zy97b26",
+        "type": "text",
+        "name": "Texte 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 2,
+        "color": "#24D26D",
+        "height": 48
+      },
+      {
+        "id": "trk_miyjxg07knu27",
+        "type": "video",
+        "name": "Vidéo 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 3,
+        "color": "#3D8BFF",
+        "height": 48
+      },
+      {
+        "id": "trk_miyjxahw6sj28",
+        "type": "audio",
+        "name": "Audio 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 4,
+        "color": "#E0A526",
+        "height": 48
+      }
+    ],
+    "clips": [
+      {
+        "id": "clp_miyjxvq0taq29",
+        "trackId": "trk_miyjxg07knu27",
+        "kind": "generator",
+        "name": "Tunnel",
+        "start": 0,
+        "duration": 6,
+        "transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "type": "tunnel",
+          "params": {
+            "c1": "#0F3D22",
+            "c2": "#050505",
+            "speed": 1.2,
+            "rings": 12
+          },
+          "width": 1920,
+          "height": 1080
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {},
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyjxwpwfmg2a",
+        "trackId": "trk_miyjx6de1j82b",
+        "kind": "progress",
+        "name": "Anneau",
+        "start": 0,
+        "duration": 5,
+        "transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "style": "ring",
+          "value": 1,
+          "auto": true,
+          "duration": 5,
+          "easing": "linear",
+          "width": 1500,
+          "height": 24,
+          "thickness": 26,
+          "color": "#24D26D",
+          "trackColor": "#1F1F1F",
+          "radius": 12,
+          "showLabel": false,
+          "labelColor": "#EDEDED",
+          "fontSize": 36
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {},
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyk0ue96br2c",
+        "trackId": "trk_miyk0kshmkh2d",
+        "kind": "counter",
+        "name": "Décompte",
+        "start": 0,
+        "duration": 5,
+        "transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "from": 5,
+          "to": 0,
+          "decimals": 0,
+          "prefix": "",
+          "suffix": "",
+          "format": "number",
+          "currency": "EUR",
+          "separator": true,
+          "startAt": 0,
+          "duration": 5,
+          "easing": "linear",
+          "fontFamily": "Inter",
+          "fontSize": 300,
+          "fontWeight": 900,
+          "color": "#FFFFFF"
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {},
+        "expressions": {
+          "transform.scale": "1 + 0.12 * Math.exp(-((time % 1) * 6))"
+        },
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyk3p75v0p2e",
+        "trackId": "trk_miyjx5zy97b26",
+        "kind": "text",
+        "name": "Fin",
+        "start": 5,
+        "duration": 1,
+        "transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "text": "C'EST PARTI !",
+          "fontFamily": "Inter",
+          "fontSize": 170,
+          "fontWeight": 900,
+          "italic": false,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "kerning": true,
+          "align": "center",
+          "color": "#24D26D",
+          "textTransform": "none",
+          "fill": {
+            "type": "solid",
+            "stops": [
+              {
+                "o": 0,
+                "c": "#24D26D"
+              },
+              {
+                "o": 1,
+                "c": "#0B3DFF"
+              }
+            ],
+            "angle": 90
+          },
+          "stroke": {
+            "enabled": false,
+            "color": "#050505",
+            "width": 6
+          },
+          "shadow": {
+            "enabled": false,
+            "color": "#000000AA",
+            "blur": 20,
+            "x": 0,
+            "y": 8
+          },
+          "extrude": {
+            "enabled": false,
+            "depth": 14,
+            "color": "#0F3D22",
+            "angle": 135
+          },
+          "maxWidth": 0,
+          "onPath": null,
+          "animator": null,
+          "background": {
+            "enabled": false,
+            "color": "#050505CC",
+            "padding": 24,
+            "radius": 12
+          }
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {},
+        "expressions": {},
+        "transitionIn": {
+          "type": "flashWhite",
+          "duration": 0.4,
+          "easing": "easeInOutCubic",
+          "params": {
+            "color": "#ffffff"
+          }
+        },
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      }
+    ],
+    "markers": [],
+    "workArea": {
+      "in": 0,
+      "out": 6
+    },
+    "presets": [],
+    "luts": []
+  }
+}

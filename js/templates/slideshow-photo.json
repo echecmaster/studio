@@ -1,0 +1,549 @@
+{
+  "id": "slideshow-photo",
+  "name": "Diaporama photo",
+  "description": "Cinq diapositives avec Ken Burns et fondus enchaînés (remplacez les visuels par vos photos).",
+  "thumbTime": 1.2,
+  "project": {
+    "version": 1,
+    "id": "tpl_slideshow-photo",
+    "meta": {
+      "name": "Diaporama photo",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration": 12.5,
+      "background": "#000000",
+      "sampleRate": 48000
+    },
+    "assets": [],
+    "tracks": [
+      {
+        "id": "trk_miyk7cr2h3r2k",
+        "type": "video",
+        "name": "Vidéo 2",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 0,
+        "color": "#3D8BFF",
+        "height": 48,
+        "groupId": null,
+        "collapsed": false
+      },
+      {
+        "id": "trk_miyk5gsopcs2f",
+        "type": "text",
+        "name": "Texte 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 1,
+        "color": "#24D26D",
+        "height": 48
+      },
+      {
+        "id": "trk_miyk5y3ybdk2g",
+        "type": "video",
+        "name": "Vidéo 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 2,
+        "color": "#3D8BFF",
+        "height": 48
+      },
+      {
+        "id": "trk_miyk5k7puc02h",
+        "type": "audio",
+        "name": "Audio 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 3,
+        "color": "#E0A526",
+        "height": 48
+      }
+    ],
+    "clips": [
+      {
+        "id": "clp_miyk6fpypi02i",
+        "trackId": "trk_miyk5y3ybdk2g",
+        "kind": "generator",
+        "name": "Photo 1 (à remplacer)",
+        "start": 0,
+        "duration": 3,
+        "transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "type": "meshGradient",
+          "params": {
+            "c1": "#24d26d",
+            "c2": "#0b3dff",
+            "c3": "#ff3d8b",
+            "c4": "#050505",
+            "speed": 0.4,
+            "softness": 1
+          },
+          "width": 1920,
+          "height": 1080
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {
+          "transform.scale": [
+            {
+              "t": 0,
+              "v": 1,
+              "easing": "linear"
+            },
+            {
+              "t": 3,
+              "v": 1.15,
+              "easing": "easeInOutCubic"
+            }
+          ]
+        },
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyk7fpddj52j",
+        "trackId": "trk_miyk7cr2h3r2k",
+        "kind": "generator",
+        "name": "Photo 2 (à remplacer)",
+        "start": 2.4,
+        "duration": 3,
+        "transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "type": "aurora",
+          "params": {
+            "c1": "#24d26d",
+            "c2": "#7a3dff",
+            "background": "#020814",
+            "speed": 0.4,
+            "intensity": 1.2
+          },
+          "width": 1920,
+          "height": 1080
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {
+          "transform.scale": [
+            {
+              "t": 0,
+              "v": 1,
+              "easing": "linear"
+            },
+            {
+              "t": 3,
+              "v": 1.15,
+              "easing": "easeInOutCubic"
+            }
+          ]
+        },
+        "expressions": {},
+        "transitionIn": {
+          "type": "dissolve",
+          "duration": 0.6,
+          "easing": "easeInOutCubic",
+          "params": {}
+        },
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyk8409ppr2l",
+        "trackId": "trk_miyk5y3ybdk2g",
+        "kind": "generator",
+        "name": "Photo 3 (à remplacer)",
+        "start": 4.8,
+        "duration": 3,
+        "transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "type": "bokehLights",
+          "params": {
+            "c1": "#ffcc66",
+            "c2": "#24d26d",
+            "count": 25,
+            "speed": 0.3,
+            "background": "#050505"
+          },
+          "width": 1920,
+          "height": 1080
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {
+          "transform.scale": [
+            {
+              "t": 0,
+              "v": 1,
+              "easing": "linear"
+            },
+            {
+              "t": 3,
+              "v": 1.15,
+              "easing": "easeInOutCubic"
+            }
+          ]
+        },
+        "expressions": {},
+        "transitionIn": {
+          "type": "dissolve",
+          "duration": 0.6,
+          "easing": "easeInOutCubic",
+          "params": {}
+        },
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyka8e1mt02m",
+        "trackId": "trk_miyk7cr2h3r2k",
+        "kind": "generator",
+        "name": "Photo 4 (à remplacer)",
+        "start": 7.199999999999999,
+        "duration": 3,
+        "transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "type": "voronoi",
+          "params": {
+            "c1": "#24d26d",
+            "c2": "#050505",
+            "scale": 8,
+            "speed": 0.5,
+            "border": 0.05
+          },
+          "width": 1920,
+          "height": 1080
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {
+          "transform.scale": [
+            {
+              "t": 0,
+              "v": 1,
+              "easing": "linear"
+            },
+            {
+              "t": 3,
+              "v": 1.15,
+              "easing": "easeInOutCubic"
+            }
+          ]
+        },
+        "expressions": {},
+        "transitionIn": {
+          "type": "dissolve",
+          "duration": 0.6,
+          "easing": "easeInOutCubic",
+          "params": {}
+        },
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miykcyqp7qw2n",
+        "trackId": "trk_miyk5y3ybdk2g",
+        "kind": "generator",
+        "name": "Photo 5 (à remplacer)",
+        "start": 9.6,
+        "duration": 3,
+        "transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "type": "lavaLamp",
+          "params": {
+            "c1": "#ff3d8b",
+            "c2": "#1a0030",
+            "blobs": 6,
+            "speed": 0.5
+          },
+          "width": 1920,
+          "height": 1080
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {
+          "transform.scale": [
+            {
+              "t": 0,
+              "v": 1,
+              "easing": "linear"
+            },
+            {
+              "t": 3,
+              "v": 1.15,
+              "easing": "easeInOutCubic"
+            }
+          ]
+        },
+        "expressions": {},
+        "transitionIn": {
+          "type": "dissolve",
+          "duration": 0.6,
+          "easing": "easeInOutCubic",
+          "params": {}
+        },
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miykdqn4fv72o",
+        "trackId": "trk_miyk5gsopcs2f",
+        "kind": "text",
+        "name": "Titre",
+        "start": 0.5,
+        "duration": 3,
+        "transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "text": "Souvenirs d'été",
+          "fontFamily": "Georgia",
+          "fontSize": 120,
+          "fontWeight": 700,
+          "italic": true,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "kerning": true,
+          "align": "center",
+          "color": "#EDEDED",
+          "textTransform": "none",
+          "fill": {
+            "type": "solid",
+            "stops": [
+              {
+                "o": 0,
+                "c": "#24D26D"
+              },
+              {
+                "o": 1,
+                "c": "#0B3DFF"
+              }
+            ],
+            "angle": 90
+          },
+          "stroke": {
+            "enabled": false,
+            "color": "#050505",
+            "width": 6
+          },
+          "shadow": {
+            "enabled": true,
+            "color": "#000000CC",
+            "blur": 30,
+            "x": 0,
+            "y": 8
+          },
+          "extrude": {
+            "enabled": false,
+            "depth": 14,
+            "color": "#0F3D22",
+            "angle": 135
+          },
+          "maxWidth": 0,
+          "onPath": null,
+          "animator": null,
+          "background": {
+            "enabled": false,
+            "color": "#050505CC",
+            "padding": 24,
+            "radius": 12
+          }
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {
+          "transform.y": [
+            {
+              "t": 0,
+              "v": 60,
+              "easing": "easeOutCubic",
+              "hold": false
+            },
+            {
+              "t": 0.6,
+              "v": 0,
+              "easing": "linear",
+              "hold": false
+            }
+          ],
+          "transform.opacity": [
+            {
+              "t": 0,
+              "v": 0,
+              "easing": "easeOutCubic",
+              "hold": false
+            },
+            {
+              "t": 0.6,
+              "v": 1,
+              "easing": "linear",
+              "hold": false
+            },
+            {
+              "t": 2.4,
+              "v": 1,
+              "easing": "easeInCubic",
+              "hold": false
+            },
+            {
+              "t": 3,
+              "v": 0,
+              "easing": "linear",
+              "hold": false
+            }
+          ]
+        },
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      }
+    ],
+    "markers": [],
+    "workArea": {
+      "in": 0,
+      "out": 12.5
+    },
+    "presets": [],
+    "luts": []
+  }
+}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Test de rendu</title>
+<link rel="stylesheet" href="../css/fonts.css"></head>
+<body style="background:#050505;margin:0">
+<canvas id="c" width="960" height="540"></canvas>
+<script type="module">
+import { Renderer } from '../js/render/renderer.js';
+import { registry } from '../js/core/commands/index.js';
+import { CommandBus } from '../js/core/commandBus.js';
+import { createProject } from '../js/core/schema.js';
+const bus = new CommandBus({ registry, project: createProject({ meta: { background: '#101418' } }), env: 'browser' });
+const q = new URLSearchParams(location.search);
+const run = async (n, a) => { const r = await bus.run(n, a); if (!r.ok) console.error(n, r.error); return r.result; };
+await run('clip.add', { kind: 'generator', props: { type: q.get('gen') || 'meshGradient' }, start: 0, duration: 10 });
+const t1 = await run('clip.add', { kind: 'text', props: { text: 'Motion Studio', fontSize: 140 }, start: 0, duration: 10, transform: { y: -120 } });
+await run('effect.add', { clipId: t1.id, type: q.get('fx') || 'dropShadow' });
+const s = await run('clip.add', { library: 'shape-star', start: 0, duration: 10, transform: { x: -500, y: 200 } });
+await run('clip.add', { library: 'chart-bar', start: 0, duration: 10, transform: { x: 350, y: 200, scale: 0.6 } });
+await run('clip.add', { library: 'particles-confetti', start: 0, duration: 10 });
+await run('clip.add', { library: 'ui-lowerThird', start: 0, duration: 10, transform: { x: -480, y: 380 } });
+await run('clip.add', { library: '3d-cube', start: 0, duration: 10, transform: { x: 0, y: 220, scale: 0.5 } });
+await run('clip.add', { library: 'counter-number', start: 0, duration: 10, transform: { x: 650, y: -380, scale: 0.6 } });
+await run('animation.apply_preset', { clipId: s.id, preset: 'spinIn' });
+await run('transition.add', { clipId: t1.id, type: q.get('tr') || 'iris', edge: 'in', duration: 1 });
+await document.fonts.ready;
+const r = new Renderer(document.getElementById('c'), { offscreen: true, log: (l, m) => console.error(m) });
+const t = +(q.get('t') || 2.5);
+r.render(bus.project.get(), t, {});
+window.__result = { stats: r.stats, errors: [...r.errors.values()] };
+</script></body></html>

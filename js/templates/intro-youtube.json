@@ -1,0 +1,717 @@
+{
+  "id": "intro-youtube",
+  "name": "Intro YouTube",
+  "description": "Fond mesh animé, titre en pop, sous-titre, particules et whoosh visuel.",
+  "thumbTime": 1.6,
+  "project": {
+    "version": 1,
+    "id": "tpl_intro-youtube",
+    "meta": {
+      "name": "Intro YouTube",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration": 6,
+      "background": "#050505",
+      "sampleRate": 48000
+    },
+    "assets": [],
+    "tracks": [
+      {
+        "id": "trk_miyj1zsldgsf",
+        "type": "camera",
+        "name": "Caméra 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 0,
+        "color": "#3DD6D0",
+        "height": 48,
+        "groupId": null,
+        "collapsed": false
+      },
+      {
+        "id": "trk_miyiyf3cjc7d",
+        "type": "shape",
+        "name": "Formes 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 1,
+        "color": "#B05CFF",
+        "height": 48,
+        "groupId": null,
+        "collapsed": false
+      },
+      {
+        "id": "trk_miyiv3cap1mb",
+        "type": "text",
+        "name": "Texte 2",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 2,
+        "color": "#24D26D",
+        "height": 48,
+        "groupId": null,
+        "collapsed": false
+      },
+      {
+        "id": "trk_miyip943p8e6",
+        "type": "video",
+        "name": "Vidéo 2",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 3,
+        "color": "#3D8BFF",
+        "height": 48,
+        "groupId": null,
+        "collapsed": false
+      },
+      {
+        "id": "trk_miyikc2e77i1",
+        "type": "text",
+        "name": "Texte 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 4,
+        "color": "#24D26D",
+        "height": 48
+      },
+      {
+        "id": "trk_miyikiwc3812",
+        "type": "video",
+        "name": "Vidéo 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 5,
+        "color": "#3D8BFF",
+        "height": 48
+      },
+      {
+        "id": "trk_miyiki0vtk23",
+        "type": "audio",
+        "name": "Audio 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 6,
+        "color": "#E0A526",
+        "height": 48
+      }
+    ],
+    "clips": [
+      {
+        "id": "clp_miyinq093wa4",
+        "trackId": "trk_miyikiwc3812",
+        "kind": "generator",
+        "name": "Fond",
+        "start": 0,
+        "duration": 6,
+        "transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "type": "meshGradient",
+          "params": {
+            "c1": "#24D26D",
+            "c2": "#0B3DFF",
+            "c3": "#FF3D8B",
+            "c4": "#050505",
+            "speed": 0.5,
+            "softness": 1
+          },
+          "width": 1920,
+          "height": 1080
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {},
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyipu5ixj35",
+        "trackId": "trk_miyip943p8e6",
+        "kind": "particles",
+        "name": "Poussière",
+        "start": 0,
+        "duration": 6,
+        "transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "preset": "dust",
+          "rate": 30,
+          "life": 7,
+          "lifeVar": 0.3,
+          "speed": 15,
+          "speedVar": 0.4,
+          "direction": -90,
+          "spread": 180,
+          "gravity": 0,
+          "drag": 0.2,
+          "turbulence": 20,
+          "turbulenceScale": 0.004,
+          "attractors": [],
+          "collideFloor": false,
+          "floorY": 540,
+          "bounce": 0.5,
+          "sizeStart": 3,
+          "sizeEnd": 3,
+          "sizeVar": 0.4,
+          "colorStart": "#FFF4D6",
+          "colorEnd": "#FFF4D6",
+          "colors": [],
+          "opacityStart": 0.5,
+          "opacityEnd": 0,
+          "sprite": "circle",
+          "spriteAssetId": "",
+          "additive": true,
+          "spin": 0,
+          "emitterShape": "rect",
+          "emitterWidth": 1920,
+          "emitterHeight": 1080,
+          "seed": 7,
+          "burst": 0,
+          "maxParticles": 2000,
+          "width": 1920,
+          "height": 1080
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {},
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyipko0k5h7",
+        "trackId": "trk_miyikc2e77i1",
+        "kind": "text",
+        "name": "Titre",
+        "start": 0.3,
+        "duration": 5.4,
+        "transform": {
+          "x": 0,
+          "y": -40,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "text": "MA CHAÎNE",
+          "fontFamily": "Inter",
+          "fontSize": 190,
+          "fontWeight": 900,
+          "italic": false,
+          "lineHeight": 1.15,
+          "letterSpacing": 6,
+          "kerning": true,
+          "align": "center",
+          "color": "#FFFFFF",
+          "textTransform": "none",
+          "fill": {
+            "type": "solid",
+            "stops": [
+              {
+                "o": 0,
+                "c": "#24D26D"
+              },
+              {
+                "o": 1,
+                "c": "#0B3DFF"
+              }
+            ],
+            "angle": 90
+          },
+          "stroke": {
+            "enabled": false,
+            "color": "#050505",
+            "width": 6
+          },
+          "shadow": {
+            "enabled": false,
+            "color": "#000000AA",
+            "blur": 20,
+            "x": 0,
+            "y": 8
+          },
+          "extrude": {
+            "enabled": false,
+            "depth": 14,
+            "color": "#0F3D22",
+            "angle": 135
+          },
+          "maxWidth": 0,
+          "onPath": null,
+          "animator": null,
+          "background": {
+            "enabled": false,
+            "color": "#050505CC",
+            "padding": 24,
+            "radius": 12
+          }
+        },
+        "effects": [
+          {
+            "id": "fx_miyisotkx908",
+            "type": "zoomBlur",
+            "enabled": true,
+            "params": {
+              "center": [
+                0.5,
+                0.5
+              ],
+              "amount": 0.2
+            },
+            "presetOwner": "zoomBlurOut"
+          },
+          {
+            "id": "fx_miyivfwmlw39",
+            "type": "glow",
+            "enabled": true,
+            "params": {
+              "threshold": 0.75,
+              "radius": 24,
+              "intensity": 0.45,
+              "tint": "#ffffff"
+            }
+          }
+        ],
+        "blendMode": "normal",
+        "keyframes": {
+          "transform.scale": [
+            {
+              "t": 0,
+              "v": 0,
+              "easing": "easeOutBack",
+              "hold": false
+            },
+            {
+              "t": 0.7,
+              "v": 1,
+              "easing": "linear",
+              "hold": false
+            },
+            {
+              "t": 4.9,
+              "v": 1,
+              "easing": "easeInExpo",
+              "hold": false
+            },
+            {
+              "t": 5.4,
+              "v": 1.6,
+              "easing": "linear",
+              "hold": false
+            }
+          ],
+          "transform.opacity": [
+            {
+              "t": 0,
+              "v": 0,
+              "easing": "linear",
+              "hold": false
+            },
+            {
+              "t": 0.14,
+              "v": 1,
+              "easing": "linear",
+              "hold": false
+            },
+            {
+              "t": 5.15,
+              "v": 1,
+              "easing": "easeInCubic",
+              "hold": false
+            },
+            {
+              "t": 5.4,
+              "v": 0,
+              "easing": "linear",
+              "hold": false
+            }
+          ],
+          "effects.fx_miyisotkx908.params.amount": [
+            {
+              "t": 4.9,
+              "v": 0,
+              "easing": "easeInCubic"
+            },
+            {
+              "t": 5.4,
+              "v": 0.5,
+              "easing": "linear"
+            }
+          ]
+        },
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyivdu19pxa",
+        "trackId": "trk_miyiv3cap1mb",
+        "kind": "text",
+        "name": "Sous-titre",
+        "start": 0.9,
+        "duration": 4.8,
+        "transform": {
+          "x": 0,
+          "y": 110,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "text": "Nouvelle vidéo chaque semaine",
+          "fontFamily": "Inter",
+          "fontSize": 54,
+          "fontWeight": 500,
+          "italic": false,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "kerning": true,
+          "align": "center",
+          "color": "#24D26D",
+          "textTransform": "none",
+          "fill": {
+            "type": "solid",
+            "stops": [
+              {
+                "o": 0,
+                "c": "#24D26D"
+              },
+              {
+                "o": 1,
+                "c": "#0B3DFF"
+              }
+            ],
+            "angle": 90
+          },
+          "stroke": {
+            "enabled": false,
+            "color": "#050505",
+            "width": 6
+          },
+          "shadow": {
+            "enabled": false,
+            "color": "#000000AA",
+            "blur": 20,
+            "x": 0,
+            "y": 8
+          },
+          "extrude": {
+            "enabled": false,
+            "depth": 14,
+            "color": "#0F3D22",
+            "angle": 135
+          },
+          "maxWidth": 0,
+          "onPath": null,
+          "animator": {
+            "by": "word",
+            "direction": "in",
+            "start": 0,
+            "duration": 0.9,
+            "stagger": 0.08,
+            "easing": "easeOutCubic",
+            "amount": 1,
+            "random": false,
+            "type": "slide"
+          },
+          "background": {
+            "enabled": false,
+            "color": "#050505CC",
+            "padding": 24,
+            "radius": 12
+          }
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {
+          "transform.opacity": [
+            {
+              "t": 4.4,
+              "v": 1,
+              "easing": "easeInCubic",
+              "hold": false
+            },
+            {
+              "t": 4.8,
+              "v": 0,
+              "easing": "linear",
+              "hold": false
+            }
+          ]
+        },
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyiyy1bhe0c",
+        "trackId": "trk_miyiyf3cjc7d",
+        "kind": "shape",
+        "name": "Ligne",
+        "start": 0.6,
+        "duration": 5,
+        "transform": {
+          "x": 0,
+          "y": 60,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "shape": "line",
+          "width": 600,
+          "height": 250,
+          "radius": [
+            16,
+            16,
+            16,
+            16
+          ],
+          "sides": 6,
+          "points": 5,
+          "innerRadius": 0.45,
+          "path": [],
+          "closed": true,
+          "fill": {
+            "type": "solid",
+            "color": "#24D26D",
+            "stops": [
+              {
+                "o": 0,
+                "c": "#24D26D"
+              },
+              {
+                "o": 1,
+                "c": "#0B3DFF"
+              }
+            ],
+            "angle": 90,
+            "enabled": false
+          },
+          "stroke": {
+            "enabled": true,
+            "color": "#24D26D",
+            "width": 6,
+            "dash": [],
+            "cap": "round",
+            "join": "round",
+            "align": "center"
+          },
+          "trimStart": 0,
+          "trimEnd": 1,
+          "trimOffset": 0,
+          "compound": null,
+          "morphTo": null,
+          "morph": 0
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {
+          "props.trimEnd": [
+            {
+              "t": 0,
+              "v": 0,
+              "easing": "easeOutExpo"
+            },
+            {
+              "t": 0.8,
+              "v": 1,
+              "easing": "easeInOutCubic"
+            }
+          ]
+        },
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyj1vi5vxme",
+        "trackId": "trk_miyj1zsldgsf",
+        "kind": "camera",
+        "name": "Caméra",
+        "start": 0,
+        "duration": 6,
+        "transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "zoom": 1,
+          "focal": 1500,
+          "dof": {
+            "enabled": false,
+            "focus": 0,
+            "aperture": 12
+          },
+          "shake": {
+            "preset": "none",
+            "amplitude": 12,
+            "frequency": 2,
+            "rotation": 1
+          },
+          "orbit": {
+            "enabled": false,
+            "radius": 200,
+            "speed": 20
+          }
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {
+          "props.zoom": [
+            {
+              "t": 0,
+              "v": 1,
+              "easing": "easeInOutCubic"
+            },
+            {
+              "t": 6,
+              "v": 1.12
+            }
+          ]
+        },
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      }
+    ],
+    "markers": [],
+    "workArea": {
+      "in": 0,
+      "out": 6
+    },
+    "presets": [],
+    "luts": []
+  }
+}

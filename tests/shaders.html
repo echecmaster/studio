@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Test de compilation des shaders</title></head>
+<body style="background:#050505;color:#EDEDED;font-family:monospace">
+<canvas id="c" width="320" height="180"></canvas>
+<pre id="out">…</pre>
+<script type="module">
+import { Renderer } from '../js/render/renderer.js';
+import { SHADER_PRESETS } from '../js/catalog/shaders.js';
+const r = new Renderer(document.getElementById('c'), { offscreen: true });
+const failures = r.compileAll();
+for (const s of SHADER_PRESETS) { const e = r.validateShader(s.code); if (e.length) failures.push({ kind: 'shaderPreset', id: s.id, error: e.map((x) => `L${x.line}: ${x.message}`).join(' | ') }); }
+window.__result = { failures, programs: r.programs.size, broken: r.validateShader('void mainImage(out vec4 c, in vec2 f){ c = vec4(foo); }') };
+document.getElementById('out').textContent = failures.length ? JSON.stringify(failures, null, 2) : 'OK : tous les shaders compilent.';
+</script></body></html>

@@ -1,0 +1,38 @@
+/* Design tokens — thème noir & vert #24D26D */
+:root {
+  --bg: #050505;
+  --panel: #0D0D0D;
+  --panel-2: #141414;
+  --panel-3: #1A1A1A;
+  --border: #1F1F1F;
+  --border-2: #2A2A2A;
+  --accent: #24D26D;
+  --accent-hover: #1FB35C;
+  --accent-halo: #24D26D33;
+  --accent-active-bg: #0F3D22;
+  --text: #EDEDED;
+  --text-2: #8A8A8A;
+  --text-3: #5A5A5A;
+  --danger: #FF4D4D;
+  --warning: #E0A526;
+  --info: #3D8BFF;
+  --radius: 6px;
+  --radius-lg: 8px;
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --fs: 12px;
+  --fs-sm: 11px;
+  --fs-lg: 13px;
+  --dur: 160ms;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --shadow: 0 10px 40px #000000C0;
+  --glow: 0 0 0 1px var(--accent), 0 0 14px var(--accent-halo);
+  --topbar-h: 48px;
+  --transport-h: 40px;
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur: 0ms; }
+  *, *::before, *::after { transition-duration: 0ms !important; animation-duration: 0ms !important; }
+}

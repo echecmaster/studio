@@ -1,0 +1,386 @@
+{
+  "id": "tutoriel",
+  "name": "Tutoriel",
+  "description": "Écran de tutoriel : bloc de code animé, étapes et callout.",
+  "thumbTime": 5,
+  "project": {
+    "version": 1,
+    "id": "tpl_tutoriel",
+    "meta": {
+      "name": "Tutoriel",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration": 10,
+      "background": "#0a0d0b",
+      "sampleRate": 48000
+    },
+    "assets": [],
+    "tracks": [
+      {
+        "id": "trk_miyl57ofy2445",
+        "type": "shape",
+        "name": "Formes 3",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 0,
+        "color": "#B05CFF",
+        "height": 48,
+        "groupId": null,
+        "collapsed": false
+      },
+      {
+        "id": "trk_miyl4r94lsw43",
+        "type": "shape",
+        "name": "Formes 2",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 1,
+        "color": "#B05CFF",
+        "height": 48,
+        "groupId": null,
+        "collapsed": false
+      },
+      {
+        "id": "trk_miyl4fyusjs41",
+        "type": "shape",
+        "name": "Formes 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 2,
+        "color": "#B05CFF",
+        "height": 48,
+        "groupId": null,
+        "collapsed": false
+      },
+      {
+        "id": "trk_miyl2k3rd5k3w",
+        "type": "text",
+        "name": "Texte 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 3,
+        "color": "#24D26D",
+        "height": 48
+      },
+      {
+        "id": "trk_miyl26a4tvb3x",
+        "type": "video",
+        "name": "Vidéo 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 4,
+        "color": "#3D8BFF",
+        "height": 48
+      },
+      {
+        "id": "trk_miyl2z4bk5y3y",
+        "type": "audio",
+        "name": "Audio 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 5,
+        "color": "#E0A526",
+        "height": 48
+      }
+    ],
+    "clips": [
+      {
+        "id": "clp_miyl3owxhy33z",
+        "trackId": "trk_miyl2k3rd5k3w",
+        "kind": "text",
+        "name": "Étape",
+        "start": 0,
+        "duration": 10,
+        "transform": {
+          "x": -420,
+          "y": -440,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "text": "Étape 1 — Ajouter un clip",
+          "fontFamily": "Inter",
+          "fontSize": 64,
+          "fontWeight": 800,
+          "italic": false,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "kerning": true,
+          "align": "left",
+          "color": "#EDEDED",
+          "textTransform": "none",
+          "fill": {
+            "type": "solid",
+            "stops": [
+              {
+                "o": 0,
+                "c": "#24D26D"
+              },
+              {
+                "o": 1,
+                "c": "#0B3DFF"
+              }
+            ],
+            "angle": 90
+          },
+          "stroke": {
+            "enabled": false,
+            "color": "#050505",
+            "width": 6
+          },
+          "shadow": {
+            "enabled": false,
+            "color": "#000000AA",
+            "blur": 20,
+            "x": 0,
+            "y": 8
+          },
+          "extrude": {
+            "enabled": false,
+            "depth": 14,
+            "color": "#0F3D22",
+            "angle": 135
+          },
+          "maxWidth": 0,
+          "onPath": null,
+          "animator": null,
+          "background": {
+            "enabled": false,
+            "color": "#050505CC",
+            "padding": 24,
+            "radius": 12
+          }
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {
+          "transform.x": [
+            {
+              "t": 0,
+              "v": -500,
+              "easing": "easeOutCubic",
+              "hold": false
+            },
+            {
+              "t": 0.6,
+              "v": -420,
+              "easing": "linear",
+              "hold": false
+            }
+          ],
+          "transform.opacity": [
+            {
+              "t": 0,
+              "v": 0,
+              "easing": "easeOutCubic",
+              "hold": false
+            },
+            {
+              "t": 0.6,
+              "v": 1,
+              "easing": "linear",
+              "hold": false
+            }
+          ]
+        },
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyl4l7xl8i40",
+        "trackId": "trk_miyl4fyusjs41",
+        "kind": "code",
+        "name": "Code",
+        "start": 0.5,
+        "duration": 9.5,
+        "transform": {
+          "x": -200,
+          "y": 40,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "code": "const motion = await motionAPI.run('clip.add', {\n  kind: 'text',\n  props: { text: 'Bonjour' }\n});\nconsole.log(motion.ok); // true",
+          "language": "js",
+          "theme": "dark",
+          "fontSize": 30,
+          "typing": true,
+          "speed": 35,
+          "startAt": 0,
+          "width": 1100,
+          "lineNumbers": true,
+          "title": "script.js",
+          "cursor": true
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {},
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyl4zop1wa42",
+        "trackId": "trk_miyl4r94lsw43",
+        "kind": "ui",
+        "name": "Callout",
+        "start": 4,
+        "duration": 6,
+        "transform": {
+          "x": 620,
+          "y": 260,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "template": "callout",
+          "title": "Astuce",
+          "subtitle": "Tout est aussi faisable par MCP",
+          "accent": "#24D26D",
+          "textColor": "#EDEDED",
+          "background": "#0D0D0DE6",
+          "width": 560,
+          "fontFamily": "Inter",
+          "icon": "★",
+          "animate": true,
+          "animDuration": 0.6
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {},
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyl55mytp544",
+        "trackId": "trk_miyl57ofy2445",
+        "kind": "progress",
+        "name": "Avancement",
+        "start": 0,
+        "duration": 10,
+        "transform": {
+          "x": 0,
+          "y": 500,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "style": "bar",
+          "value": 1,
+          "auto": true,
+          "duration": 10,
+          "easing": "easeInOutCubic",
+          "width": 1700,
+          "height": 8,
+          "thickness": 18,
+          "color": "#24D26D",
+          "trackColor": "#1F1F1F",
+          "radius": 12,
+          "showLabel": false,
+          "labelColor": "#EDEDED",
+          "fontSize": 36
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {},
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      }
+    ],
+    "markers": [],
+    "workArea": {
+      "in": 0,
+      "out": 10
+    },
+    "presets": [],
+    "luts": []
+  }
+}

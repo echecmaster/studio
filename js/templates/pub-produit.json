@@ -1,0 +1,535 @@
+{
+  "id": "pub-produit",
+  "name": "Publicité produit",
+  "description": "Mockup téléphone, prix compté, bannière promo et étalonnage dynamique.",
+  "thumbTime": 4.5,
+  "project": {
+    "version": 1,
+    "id": "tpl_pub-produit",
+    "meta": {
+      "name": "Publicité produit",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration": 8,
+      "background": "#06100a",
+      "sampleRate": 48000
+    },
+    "assets": [],
+    "tracks": [
+      {
+        "id": "trk_miyjqo3fncw1t",
+        "type": "shape",
+        "name": "Formes 3",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 0,
+        "color": "#B05CFF",
+        "height": 48,
+        "groupId": null,
+        "collapsed": false
+      },
+      {
+        "id": "trk_miyjot86g8a1r",
+        "type": "shape",
+        "name": "Formes 2",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 1,
+        "color": "#B05CFF",
+        "height": 48,
+        "groupId": null,
+        "collapsed": false
+      },
+      {
+        "id": "trk_miyjmfetgai1o",
+        "type": "shape",
+        "name": "Formes 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 2,
+        "color": "#B05CFF",
+        "height": 48,
+        "groupId": null,
+        "collapsed": false
+      },
+      {
+        "id": "trk_miyjldhi2di1j",
+        "type": "text",
+        "name": "Texte 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 3,
+        "color": "#24D26D",
+        "height": 48
+      },
+      {
+        "id": "trk_miyjl7klq8f1k",
+        "type": "video",
+        "name": "Vidéo 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 4,
+        "color": "#3D8BFF",
+        "height": 48
+      },
+      {
+        "id": "trk_miyjll5y0jx1l",
+        "type": "audio",
+        "name": "Audio 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 5,
+        "color": "#E0A526",
+        "height": 48
+      }
+    ],
+    "clips": [
+      {
+        "id": "clp_miyjlldi1uj1m",
+        "trackId": "trk_miyjl7klq8f1k",
+        "kind": "generator",
+        "name": "Grille",
+        "start": 0,
+        "duration": 8,
+        "transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "type": "grid",
+          "params": {
+            "color": "#24D26D33",
+            "background": "#06100a",
+            "cells": 20,
+            "width": 0.02,
+            "speed": 0.15,
+            "style": "Perspective rétro"
+          },
+          "width": 1920,
+          "height": 1080
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {},
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyjmj6xbg81n",
+        "trackId": "trk_miyjmfetgai1o",
+        "kind": "mockup",
+        "name": "Téléphone",
+        "start": 0,
+        "duration": 8,
+        "transform": {
+          "x": -420,
+          "y": 40,
+          "z": 0,
+          "scale": 0.9,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "device": "phone",
+          "assetId": "",
+          "frameColor": "#141414",
+          "url": "motion.studio",
+          "width": 380,
+          "screenColor": "#0D0D0D",
+          "title": "APP"
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {
+          "transform.y": [
+            {
+              "t": 0,
+              "v": 472,
+              "easing": "easeOutExpo",
+              "hold": false
+            },
+            {
+              "t": 1,
+              "v": 40,
+              "easing": "linear",
+              "hold": false
+            },
+            {
+              "t": 2,
+              "v": 40,
+              "easing": "easeInOutSine",
+              "hold": false
+            },
+            {
+              "t": 2.5,
+              "v": 26,
+              "easing": "easeInOutSine",
+              "hold": false
+            },
+            {
+              "t": 3,
+              "v": 40,
+              "easing": "easeInOutSine",
+              "hold": false
+            },
+            {
+              "t": 3.5,
+              "v": 54,
+              "easing": "easeInOutSine",
+              "hold": false
+            },
+            {
+              "t": 4,
+              "v": 40,
+              "easing": "easeInOutSine",
+              "hold": false
+            }
+          ],
+          "transform.scale": [
+            {
+              "t": 0,
+              "v": 0.81,
+              "easing": "easeOutExpo",
+              "hold": false
+            },
+            {
+              "t": 1,
+              "v": 0.9,
+              "easing": "linear",
+              "hold": false
+            }
+          ],
+          "transform.opacity": [
+            {
+              "t": 0,
+              "v": 0,
+              "easing": "easeOutCubic",
+              "hold": false
+            },
+            {
+              "t": 0.5,
+              "v": 1,
+              "easing": "linear",
+              "hold": false
+            }
+          ]
+        },
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyjnvq4thq1p",
+        "trackId": "trk_miyjldhi2di1j",
+        "kind": "text",
+        "name": "Accroche",
+        "start": 0.6,
+        "duration": 7.4,
+        "transform": {
+          "x": 320,
+          "y": -200,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "text": "La nouvelle façon\nde créer.",
+          "fontFamily": "Inter",
+          "fontSize": 92,
+          "fontWeight": 800,
+          "italic": false,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "kerning": true,
+          "align": "left",
+          "color": "#EDEDED",
+          "textTransform": "none",
+          "fill": {
+            "type": "solid",
+            "stops": [
+              {
+                "o": 0,
+                "c": "#24D26D"
+              },
+              {
+                "o": 1,
+                "c": "#0B3DFF"
+              }
+            ],
+            "angle": 90
+          },
+          "stroke": {
+            "enabled": false,
+            "color": "#050505",
+            "width": 6
+          },
+          "shadow": {
+            "enabled": false,
+            "color": "#000000AA",
+            "blur": 20,
+            "x": 0,
+            "y": 8
+          },
+          "extrude": {
+            "enabled": false,
+            "depth": 14,
+            "color": "#0F3D22",
+            "angle": 135
+          },
+          "maxWidth": 0,
+          "onPath": null,
+          "animator": null,
+          "background": {
+            "enabled": false,
+            "color": "#050505CC",
+            "padding": 24,
+            "radius": 12
+          }
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {
+          "transform.x": [
+            {
+              "t": 0,
+              "v": 400,
+              "easing": "easeOutCubic",
+              "hold": false
+            },
+            {
+              "t": 0.6,
+              "v": 320,
+              "easing": "linear",
+              "hold": false
+            }
+          ],
+          "transform.opacity": [
+            {
+              "t": 0,
+              "v": 0,
+              "easing": "easeOutCubic",
+              "hold": false
+            },
+            {
+              "t": 0.6,
+              "v": 1,
+              "easing": "linear",
+              "hold": false
+            }
+          ]
+        },
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyjo18wscn1q",
+        "trackId": "trk_miyjot86g8a1r",
+        "kind": "counter",
+        "name": "Prix",
+        "start": 1.5,
+        "duration": 6.5,
+        "transform": {
+          "x": 320,
+          "y": 80,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "from": 0,
+          "to": 9.99,
+          "decimals": 2,
+          "prefix": "",
+          "suffix": "",
+          "format": "currency",
+          "currency": "EUR",
+          "separator": true,
+          "startAt": 0.5,
+          "duration": 1.5,
+          "easing": "easeOutCubic",
+          "fontFamily": "Inter",
+          "fontSize": 150,
+          "fontWeight": 800,
+          "color": "#24D26D"
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {
+          "transform.scale": [
+            {
+              "t": 2.2,
+              "v": 1,
+              "easing": "easeOutQuad",
+              "hold": false
+            },
+            {
+              "t": 2.4,
+              "v": 1.25,
+              "easing": "easeOutQuad",
+              "hold": false
+            },
+            {
+              "t": 2.6,
+              "v": 1,
+              "easing": "easeOutQuad",
+              "hold": false
+            }
+          ]
+        },
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyjq70vnu01s",
+        "trackId": "trk_miyjqo3fncw1t",
+        "kind": "ui",
+        "name": "Bannière",
+        "start": 4,
+        "duration": 4,
+        "transform": {
+          "x": 0,
+          "y": 420,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "template": "banner",
+          "title": "-30 % AUJOURD'HUI",
+          "subtitle": "Code : MOTION30",
+          "accent": "#24D26D",
+          "textColor": "#050505",
+          "background": "#24D26D",
+          "width": 1920,
+          "fontFamily": "Inter",
+          "icon": "★",
+          "animate": true,
+          "animDuration": 0.6
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {},
+        "expressions": {},
+        "transitionIn": {
+          "type": "wipe-right",
+          "duration": 0.5,
+          "easing": "easeInOutCubic",
+          "params": {
+            "softness": 0.05
+          }
+        },
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      }
+    ],
+    "markers": [],
+    "workArea": {
+      "in": 0,
+      "out": 8
+    },
+    "presets": [],
+    "luts": []
+  }
+}

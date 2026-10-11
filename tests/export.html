@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Test d'export</title><link rel="stylesheet" href="../css/fonts.css"></head>
+<body style="background:#050505;color:#eee;font-family:monospace"><pre id="o">…</pre>
+<script type="module">
+import { registry } from '../js/core/commands/index.js';
+import { CommandBus } from '../js/core/commandBus.js';
+import { createProject } from '../js/core/schema.js';
+import { MediaManager } from '../js/render/media.js';
+import { AudioAnalysis } from '../js/audio/analyzer.js';
+import { Exporter } from '../js/export/exporter.js';
+import { synthSfx, audioBufferToWav } from '../js/audio/sfx.js';
+const q = new URLSearchParams(location.search);
+const fmt = q.get('format') || 'mp4';
+const bus = new CommandBus({ registry, project: createProject({ meta: { width: 640, height: 360, duration: 2 } }), env: 'browser' });
+await bus.run('clip.add', { kind: 'generator', props: { type: 'plasma' }, start: 0, duration: 2 });
+await bus.run('clip.add', { kind: 'text', props: { text: 'Export', fontSize: 80 }, start: 0, duration: 2 });
+const media = new MediaManager();
+// audio de test : un "whoosh" synthétique
+const buf = await synthSfx('whoosh', 1.5);
+const asset = { id: 'ast_test', type: 'audio', name: 'whoosh.wav', ref: 'test', mime: 'audio/wav' };
+await media.register(asset, audioBufferToWav(buf));
+const p = bus.project.get();
+p.assets.push(asset);
+p.clips.push({ ...p.clips[0], id: 'clp_audio', kind: 'audio', trackId: p.tracks[2].id, start: 0.2, duration: 1.5, props: { assetId: 'ast_test', volume: 1 }, effects: [], keyframes: {}, expressions: {} });
+const analysis = new AudioAnalysis(media);
+const logs = [];
+let blobInfo = null;
+const ex = new Exporter({ media, audio: analysis, log: (l, m) => logs.push(`${l}: ${m}`), emit: () => {}, download: (b, n) => { blobInfo = { size: b.size, type: b.type, n }; } });
+const caps = await ex.capabilities();
+await ex.start(p, { format: fmt, quality: 'medium' }, bus.app.get());
+while (ex.job) await new Promise((r) => setTimeout(r, 100));
+const st = ex.status();
+let decoded = null;
+if (fmt === 'gif' && blobInfo) { const img = new Image(); img.src = ex.last.result.blobUrl; await img.decode().catch((e) => decoded = 'decode error ' + e); decoded ||= `${img.naturalWidth}x${img.naturalHeight}`; }
+if (fmt === 'mp4' && blobInfo) { const v = document.createElement('video'); v.src = ex.last.result.blobUrl; await new Promise((r) => { v.onloadedmetadata = r; v.onerror = r; }); decoded = { duration: v.duration, w: v.videoWidth, err: v.error?.message }; }
+window.__result = { caps, status: st.status, error: st.error, method: st.method, result: st.result && { ...st.result, blob: undefined }, blobInfo, logs, decoded };
+document.getElementById('o').textContent = JSON.stringify(window.__result, null, 2);
+</script></body></html>

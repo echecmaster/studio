@@ -1,0 +1,212 @@
+{
+  "id": "lower-third",
+  "name": "Lower third",
+  "description": "Bandeau nom/fonction animé sur fond vidéo (remplaçable).",
+  "thumbTime": 1.5,
+  "project": {
+    "version": 1,
+    "id": "tpl_lower-third",
+    "meta": {
+      "name": "Lower third",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration": 6,
+      "background": "#1a1f24",
+      "sampleRate": 48000
+    },
+    "assets": [],
+    "tracks": [
+      {
+        "id": "trk_miyjg2f2ofa17",
+        "type": "shape",
+        "name": "Formes 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 0,
+        "color": "#B05CFF",
+        "height": 48,
+        "groupId": null,
+        "collapsed": false
+      },
+      {
+        "id": "trk_miyjf6tqi0g12",
+        "type": "text",
+        "name": "Texte 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 1,
+        "color": "#24D26D",
+        "height": 48
+      },
+      {
+        "id": "trk_miyjftftekd13",
+        "type": "video",
+        "name": "Vidéo 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 2,
+        "color": "#3D8BFF",
+        "height": 48
+      },
+      {
+        "id": "trk_miyjfty5k7k14",
+        "type": "audio",
+        "name": "Audio 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 3,
+        "color": "#E0A526",
+        "height": 48
+      }
+    ],
+    "clips": [
+      {
+        "id": "clp_miyjf94uucq15",
+        "trackId": "trk_miyjftftekd13",
+        "kind": "generator",
+        "name": "Fond (remplacer par votre vidéo)",
+        "start": 0,
+        "duration": 6,
+        "transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "type": "gradient",
+          "params": {
+            "c1": "#2b3a4a",
+            "c2": "#101418",
+            "c3": "#1a1f24",
+            "angle": 120,
+            "speed": 0.1,
+            "type": "Linéaire"
+          },
+          "width": 1920,
+          "height": 1080
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {},
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyjgx1u7bj16",
+        "trackId": "trk_miyjg2f2ofa17",
+        "kind": "ui",
+        "name": "Lower third",
+        "start": 0.5,
+        "duration": 5,
+        "transform": {
+          "x": -480,
+          "y": 330,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "template": "lowerThird",
+          "title": "Camille Martin",
+          "subtitle": "Fondatrice · Studio Nova",
+          "accent": "#24D26D",
+          "textColor": "#EDEDED",
+          "background": "#0D0D0DE6",
+          "width": 760,
+          "fontFamily": "Inter",
+          "icon": "★",
+          "animate": true,
+          "animDuration": 0.6
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {
+          "transform.x": [
+            {
+              "t": 4.5,
+              "v": -480,
+              "easing": "easeInCubic",
+              "hold": false
+            },
+            {
+              "t": 5,
+              "v": -1632,
+              "easing": "linear",
+              "hold": false
+            }
+          ],
+          "transform.opacity": [
+            {
+              "t": 4.8,
+              "v": 1,
+              "easing": "easeInQuad",
+              "hold": false
+            },
+            {
+              "t": 5,
+              "v": 0,
+              "easing": "linear",
+              "hold": false
+            }
+          ]
+        },
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      }
+    ],
+    "markers": [],
+    "workArea": {
+      "in": 0,
+      "out": 6
+    },
+    "presets": [],
+    "luts": []
+  }
+}

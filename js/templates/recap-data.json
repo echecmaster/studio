@@ -1,0 +1,424 @@
+{
+  "id": "recap-data",
+  "name": "Récap data",
+  "description": "Chiffres clés animés : barres, donut et compteur.",
+  "thumbTime": 3.5,
+  "project": {
+    "version": 1,
+    "id": "tpl_recap-data",
+    "meta": {
+      "name": "Récap data",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration": 9,
+      "background": "#070a08",
+      "sampleRate": 48000
+    },
+    "assets": [],
+    "tracks": [
+      {
+        "id": "trk_miyktbjnrj23h",
+        "type": "shape",
+        "name": "Formes 3",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 0,
+        "color": "#B05CFF",
+        "height": 48,
+        "groupId": null,
+        "collapsed": false
+      },
+      {
+        "id": "trk_miyktjwsjvd3f",
+        "type": "shape",
+        "name": "Formes 2",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 1,
+        "color": "#B05CFF",
+        "height": 48,
+        "groupId": null,
+        "collapsed": false
+      },
+      {
+        "id": "trk_miyks802v0v3d",
+        "type": "shape",
+        "name": "Formes 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 2,
+        "color": "#B05CFF",
+        "height": 48,
+        "groupId": null,
+        "collapsed": false
+      },
+      {
+        "id": "trk_miykrn4sy0l38",
+        "type": "text",
+        "name": "Texte 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 3,
+        "color": "#24D26D",
+        "height": 48
+      },
+      {
+        "id": "trk_miykre92ufb39",
+        "type": "video",
+        "name": "Vidéo 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 4,
+        "color": "#3D8BFF",
+        "height": 48
+      },
+      {
+        "id": "trk_miykrfysjj13a",
+        "type": "audio",
+        "name": "Audio 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 5,
+        "color": "#E0A526",
+        "height": 48
+      }
+    ],
+    "clips": [
+      {
+        "id": "clp_miykra8036w3b",
+        "trackId": "trk_miykrn4sy0l38",
+        "kind": "text",
+        "name": "Titre",
+        "start": 0,
+        "duration": 9,
+        "transform": {
+          "x": 0,
+          "y": -430,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "text": "Bilan 2026",
+          "fontFamily": "Inter",
+          "fontSize": 110,
+          "fontWeight": 900,
+          "italic": false,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "kerning": true,
+          "align": "center",
+          "color": "#EDEDED",
+          "textTransform": "none",
+          "fill": {
+            "type": "solid",
+            "stops": [
+              {
+                "o": 0,
+                "c": "#24D26D"
+              },
+              {
+                "o": 1,
+                "c": "#0B3DFF"
+              }
+            ],
+            "angle": 90
+          },
+          "stroke": {
+            "enabled": false,
+            "color": "#050505",
+            "width": 6
+          },
+          "shadow": {
+            "enabled": false,
+            "color": "#000000AA",
+            "blur": 20,
+            "x": 0,
+            "y": 8
+          },
+          "extrude": {
+            "enabled": false,
+            "depth": 14,
+            "color": "#0F3D22",
+            "angle": 135
+          },
+          "maxWidth": 0,
+          "onPath": null,
+          "animator": null,
+          "background": {
+            "enabled": false,
+            "color": "#050505CC",
+            "padding": 24,
+            "radius": 12
+          }
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {
+          "transform.y": [
+            {
+              "t": 0,
+              "v": -490,
+              "easing": "easeOutCubic",
+              "hold": false
+            },
+            {
+              "t": 0.6,
+              "v": -430,
+              "easing": "linear",
+              "hold": false
+            }
+          ],
+          "transform.opacity": [
+            {
+              "t": 0,
+              "v": 0,
+              "easing": "easeOutCubic",
+              "hold": false
+            },
+            {
+              "t": 0.6,
+              "v": 1,
+              "easing": "linear",
+              "hold": false
+            }
+          ]
+        },
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyksu851r33c",
+        "trackId": "trk_miyks802v0v3d",
+        "kind": "chart",
+        "name": "Ventes",
+        "start": 0.4,
+        "duration": 8.6,
+        "transform": {
+          "x": -440,
+          "y": 80,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "chartType": "bar",
+          "data": "T1,42\nT2,58\nT3,71\nT4,96",
+          "colors": [
+            "#24D26D",
+            "#1FB35C",
+            "#0B3DFF",
+            "#FF3D8B",
+            "#E0A526",
+            "#8A8A8A"
+          ],
+          "progress": 1,
+          "autoAnimate": true,
+          "animDuration": 1.2,
+          "width": 900,
+          "height": 520,
+          "showLabels": true,
+          "showValues": true,
+          "valuePrefix": "",
+          "valueSuffix": " k",
+          "fontSize": 28,
+          "textColor": "#EDEDED",
+          "gridColor": "#1F1F1F",
+          "stagger": 0.08
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {},
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miykt5kf4pt3e",
+        "trackId": "trk_miyktjwsjvd3f",
+        "kind": "chart",
+        "name": "Répartition",
+        "start": 1,
+        "duration": 8,
+        "transform": {
+          "x": 480,
+          "y": -40,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "chartType": "donut",
+          "data": [
+            {
+              "label": "Web",
+              "value": 55
+            },
+            {
+              "label": "Mobile",
+              "value": 30
+            },
+            {
+              "label": "Autre",
+              "value": 15
+            }
+          ],
+          "colors": [
+            "#24D26D",
+            "#1FB35C",
+            "#0B3DFF",
+            "#FF3D8B",
+            "#E0A526",
+            "#8A8A8A"
+          ],
+          "progress": 1,
+          "autoAnimate": true,
+          "animDuration": 1.2,
+          "width": 820,
+          "height": 420,
+          "showLabels": true,
+          "showValues": true,
+          "valuePrefix": "",
+          "valueSuffix": " %",
+          "fontSize": 28,
+          "textColor": "#EDEDED",
+          "gridColor": "#1F1F1F",
+          "stagger": 0.08
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {},
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyktdzhbpk3g",
+        "trackId": "trk_miyktbjnrj23h",
+        "kind": "counter",
+        "name": "Compteur",
+        "start": 1.5,
+        "duration": 7.5,
+        "transform": {
+          "x": 480,
+          "y": 330,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "from": 0,
+          "to": 128450,
+          "decimals": 0,
+          "prefix": "",
+          "suffix": " utilisateurs",
+          "format": "number",
+          "currency": "EUR",
+          "separator": true,
+          "startAt": 0,
+          "duration": 2.5,
+          "easing": "easeOutCubic",
+          "fontFamily": "Inter",
+          "fontSize": 80,
+          "fontWeight": 800,
+          "color": "#24D26D"
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {},
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      }
+    ],
+    "markers": [],
+    "workArea": {
+      "in": 0,
+      "out": 9
+    },
+    "presets": [],
+    "luts": []
+  }
+}

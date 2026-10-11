@@ -1,0 +1,585 @@
+{
+  "id": "annonce-evenement",
+  "name": "Annonce d'événement",
+  "description": "Date, lieu, compteur et confettis pour annoncer un événement.",
+  "thumbTime": 3,
+  "project": {
+    "version": 1,
+    "id": "tpl_annonce-evenement",
+    "meta": {
+      "name": "Annonce d'événement",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration": 8,
+      "background": "#0b0716",
+      "sampleRate": 48000
+    },
+    "assets": [],
+    "tracks": [
+      {
+        "id": "trk_miykpyph3yi37",
+        "type": "video",
+        "name": "Vidéo 2",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 0,
+        "color": "#3D8BFF",
+        "height": 48,
+        "groupId": null,
+        "collapsed": false
+      },
+      {
+        "id": "trk_miyko3ze0g735",
+        "type": "text",
+        "name": "Texte 3",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 1,
+        "color": "#24D26D",
+        "height": 48,
+        "groupId": null,
+        "collapsed": false
+      },
+      {
+        "id": "trk_miykmas3hmd33",
+        "type": "text",
+        "name": "Texte 2",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 2,
+        "color": "#24D26D",
+        "height": 48,
+        "groupId": null,
+        "collapsed": false
+      },
+      {
+        "id": "trk_miykk96zqs62x",
+        "type": "text",
+        "name": "Texte 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 3,
+        "color": "#24D26D",
+        "height": 48
+      },
+      {
+        "id": "trk_miykk4alewr2y",
+        "type": "video",
+        "name": "Vidéo 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 4,
+        "color": "#3D8BFF",
+        "height": 48
+      },
+      {
+        "id": "trk_miykl3itqu92z",
+        "type": "audio",
+        "name": "Audio 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 5,
+        "color": "#E0A526",
+        "height": 48
+      }
+    ],
+    "clips": [
+      {
+        "id": "clp_miyklgg39ys30",
+        "trackId": "trk_miykk4alewr2y",
+        "kind": "generator",
+        "name": "Lignes",
+        "start": 0,
+        "duration": 8,
+        "transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 0.25
+        },
+        "props": {
+          "type": "speedLines",
+          "params": {
+            "color": "#FFFFFF",
+            "count": 160,
+            "speed": 3,
+            "inner": 0.3,
+            "style": "Radiales (manga)"
+          },
+          "width": 1920,
+          "height": 1080
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {},
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miykm3i27rb31",
+        "trackId": "trk_miykk96zqs62x",
+        "kind": "text",
+        "name": "Sur-titre",
+        "start": 0.2,
+        "duration": 7.8,
+        "transform": {
+          "x": 0,
+          "y": -260,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "text": "SAVE THE DATE",
+          "fontFamily": "Inter",
+          "fontSize": 70,
+          "fontWeight": 800,
+          "italic": false,
+          "lineHeight": 1.15,
+          "letterSpacing": 16,
+          "kerning": true,
+          "align": "center",
+          "color": "#24D26D",
+          "textTransform": "none",
+          "fill": {
+            "type": "solid",
+            "stops": [
+              {
+                "o": 0,
+                "c": "#24D26D"
+              },
+              {
+                "o": 1,
+                "c": "#0B3DFF"
+              }
+            ],
+            "angle": 90
+          },
+          "stroke": {
+            "enabled": false,
+            "color": "#050505",
+            "width": 6
+          },
+          "shadow": {
+            "enabled": false,
+            "color": "#000000AA",
+            "blur": 20,
+            "x": 0,
+            "y": 8
+          },
+          "extrude": {
+            "enabled": false,
+            "depth": 14,
+            "color": "#0F3D22",
+            "angle": 135
+          },
+          "maxWidth": 0,
+          "onPath": null,
+          "animator": null,
+          "background": {
+            "enabled": false,
+            "color": "#050505CC",
+            "padding": 24,
+            "radius": 12
+          }
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {
+          "transform.y": [
+            {
+              "t": 0,
+              "v": -320,
+              "easing": "easeOutCubic",
+              "hold": false
+            },
+            {
+              "t": 0.6,
+              "v": -260,
+              "easing": "linear",
+              "hold": false
+            }
+          ],
+          "transform.opacity": [
+            {
+              "t": 0,
+              "v": 0,
+              "easing": "easeOutCubic",
+              "hold": false
+            },
+            {
+              "t": 0.6,
+              "v": 1,
+              "easing": "linear",
+              "hold": false
+            }
+          ]
+        },
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miykmy0a4af32",
+        "trackId": "trk_miykmas3hmd33",
+        "kind": "text",
+        "name": "Date",
+        "start": 0.6,
+        "duration": 7.4,
+        "transform": {
+          "x": 0,
+          "y": -60,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "text": "24 · 10 · 2026",
+          "fontFamily": "Inter",
+          "fontSize": 200,
+          "fontWeight": 900,
+          "italic": false,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "kerning": true,
+          "align": "center",
+          "color": "#EDEDED",
+          "textTransform": "none",
+          "fill": {
+            "type": "solid",
+            "stops": [
+              {
+                "o": 0,
+                "c": "#24D26D"
+              },
+              {
+                "o": 1,
+                "c": "#0B3DFF"
+              }
+            ],
+            "angle": 90
+          },
+          "stroke": {
+            "enabled": false,
+            "color": "#050505",
+            "width": 6
+          },
+          "shadow": {
+            "enabled": false,
+            "color": "#000000AA",
+            "blur": 20,
+            "x": 0,
+            "y": 8
+          },
+          "extrude": {
+            "enabled": false,
+            "depth": 14,
+            "color": "#0F3D22",
+            "angle": 135
+          },
+          "maxWidth": 0,
+          "onPath": null,
+          "animator": {
+            "by": "char",
+            "direction": "in",
+            "start": 0,
+            "duration": 1.2,
+            "stagger": 0.05,
+            "easing": "easeOutCubic",
+            "amount": 1,
+            "random": false,
+            "type": "scramble"
+          },
+          "background": {
+            "enabled": false,
+            "color": "#050505CC",
+            "padding": 24,
+            "radius": 12
+          }
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {},
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyko31yngt34",
+        "trackId": "trk_miyko3ze0g735",
+        "kind": "text",
+        "name": "Lieu",
+        "start": 1.4,
+        "duration": 6.6,
+        "transform": {
+          "x": 0,
+          "y": 120,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "text": "Paris · La Gaîté Lyrique",
+          "fontFamily": "Inter",
+          "fontSize": 60,
+          "fontWeight": 500,
+          "italic": false,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "kerning": true,
+          "align": "center",
+          "color": "#8A8A8A",
+          "textTransform": "none",
+          "fill": {
+            "type": "solid",
+            "stops": [
+              {
+                "o": 0,
+                "c": "#24D26D"
+              },
+              {
+                "o": 1,
+                "c": "#0B3DFF"
+              }
+            ],
+            "angle": 90
+          },
+          "stroke": {
+            "enabled": false,
+            "color": "#050505",
+            "width": 6
+          },
+          "shadow": {
+            "enabled": false,
+            "color": "#000000AA",
+            "blur": 20,
+            "x": 0,
+            "y": 8
+          },
+          "extrude": {
+            "enabled": false,
+            "depth": 14,
+            "color": "#0F3D22",
+            "angle": 135
+          },
+          "maxWidth": 0,
+          "onPath": null,
+          "animator": null,
+          "background": {
+            "enabled": false,
+            "color": "#050505CC",
+            "padding": 24,
+            "radius": 12
+          }
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {
+          "transform.y": [
+            {
+              "t": 0,
+              "v": 180,
+              "easing": "easeOutCubic",
+              "hold": false
+            },
+            {
+              "t": 0.6,
+              "v": 120,
+              "easing": "linear",
+              "hold": false
+            }
+          ],
+          "transform.opacity": [
+            {
+              "t": 0,
+              "v": 0,
+              "easing": "easeOutCubic",
+              "hold": false
+            },
+            {
+              "t": 0.6,
+              "v": 1,
+              "easing": "linear",
+              "hold": false
+            }
+          ]
+        },
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miykp823c2o36",
+        "trackId": "trk_miykpyph3yi37",
+        "kind": "particles",
+        "name": "Confettis",
+        "start": 2,
+        "duration": 6,
+        "transform": {
+          "x": 0,
+          "y": -600,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "preset": "confetti",
+          "rate": 80,
+          "life": 3,
+          "lifeVar": 0.3,
+          "speed": 700,
+          "speedVar": 0.4,
+          "direction": -90,
+          "spread": 70,
+          "gravity": 900,
+          "drag": 0.6,
+          "turbulence": 0,
+          "turbulenceScale": 0.004,
+          "attractors": [],
+          "collideFloor": false,
+          "floorY": 540,
+          "bounce": 0.5,
+          "sizeStart": 16,
+          "sizeEnd": 16,
+          "sizeVar": 0.4,
+          "colorStart": "#24D26D",
+          "colorEnd": "#0B3DFF",
+          "colors": [
+            "#24D26D",
+            "#FF3D8B",
+            "#3D8BFF",
+            "#FFD23D",
+            "#FFFFFF"
+          ],
+          "opacityStart": 1,
+          "opacityEnd": 1,
+          "sprite": "confetti",
+          "spriteAssetId": "",
+          "additive": false,
+          "spin": 720,
+          "emitterShape": "line",
+          "emitterWidth": 600,
+          "emitterHeight": 0,
+          "seed": 7,
+          "burst": 0,
+          "maxParticles": 2000,
+          "width": 1920,
+          "height": 1080
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {},
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      }
+    ],
+    "markers": [],
+    "workArea": {
+      "in": 0,
+      "out": 8
+    },
+    "presets": [],
+    "luts": []
+  }
+}

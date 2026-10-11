@@ -109,5 +109,8 @@ export default [
     return sc;
   }, { history: false }),
   cmd('app.reset_shortcuts', 'Réinitialiser les raccourcis', 'Reset shortcuts', args({}), (ctx) => { ctx.setApp({ shortcuts: {} }); return { reset: true }; }, { history: false }),
+  cmd('mcp.relay_connect', 'Relais MCP distant : ouvrir une session (sessionId + code d\'appairage) pour piloter cet onglet depuis un client MCP', 'Connect remote MCP relay', args({}), (ctx) => ctx.services.mcp.connect(), { env: 'browser', history: false }),
+  cmd('mcp.relay_disconnect', 'Relais MCP distant : fermer la session', 'Disconnect remote MCP relay', args({}), (ctx) => { ctx.services.mcp.disconnect(); return { disconnected: true }; }, { env: 'browser', history: false }),
+  cmd('mcp.status', 'Statut MCP : WebMCP, relais distant, session, outils exposés', 'MCP status', args({}), (ctx) => ({ ...ctx.app.mcp, tools: ctx.bus.registry.list().length })),
   cmd('app.log', 'Lire le journal (console) de l\'application', 'Read app log', args({ level: S.enm('Niveau', ['info', 'warn', 'error']), limit: S.int('Nombre', { minimum: 1, maximum: 500 }) }), (ctx, a) => ctx.bus.log.filter((l) => !a.level || l.level === a.level).slice(-(a.limit || 100))),
 ];

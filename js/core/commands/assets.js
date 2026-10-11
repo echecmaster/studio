@@ -4,6 +4,26 @@ import { CommandError } from '../commandBus.js';
 import { parseCube } from '../../catalog/luts.js';
 import { FONTS } from '../../catalog/elements.js';
 
+export function textAssetMeta(type, text) {
+  if (type === 'lottie' || type === 'json') {
+    let j;
+    try { j = JSON.parse(text); } catch (e) { throw new CommandError(`JSON invalide : ${e.message}`); }
+    if (type === 'lottie') {
+      if (!j.layers || !j.fr) throw new CommandError('Ce JSON ne ressemble pas à une animation Lottie (layers/fr manquants).');
+      return { width: j.w, height: j.h, fps: j.fr, duration: (j.op - j.ip) / j.fr, layers: j.layers.length };
+    }
+    return {};
+  }
+  if (type === 'svg') {
+    if (!/<svg[\s>]/i.test(text)) throw new CommandError('Contenu SVG invalide (balise <svg> absente).');
+    const w = text.match(/\bwidth="([\d.]+)/), h = text.match(/\bheight="([\d.]+)/), vb = text.match(/viewBox="[\d.\s-]*?([\d.]+)\s+([\d.]+)"/);
+    return { width: +(w?.[1] || vb?.[1] || 512), height: +(h?.[1] || vb?.[2] || 512) };
+  }
+  if (type === 'lut') return { size: parseCube(text).size };
+  if (type === 'csv') return { rows: text.trim().split(/\r?\n/).length };
+  return {};
+}
+
 export const SFX_TYPES = ['whoosh', 'pop', 'click', 'riser', 'impact', 'swoosh', 'ding', 'glitch', 'beep', 'drum', 'bass', 'sparkle'];
 
 function usage(project, id) {
@@ -41,22 +61,7 @@ export default [
   }, { mutates: true, env: 'browser' }),
 
   cmd('asset.import_text', 'Importer un asset texte : SVG, Lottie JSON, JSON, CSV ou LUT .cube', 'Import text asset (svg/lottie/json/csv/cube)', args({ text: S.str('Contenu', { maxLength: 4000000 }), name: S.str('Nom'), type: S.enm('Type', ['svg', 'lottie', 'json', 'csv', 'lut']) }, ['text', 'type']), async (ctx, a) => {
-    const asset = { id: uid('ast'), type: a.type, name: a.name || `${a.type}-${ctx.project.assets.length + 1}`, ref: 'inline', mime: { svg: 'image/svg+xml', lottie: 'application/json', json: 'application/json', csv: 'text/csv', lut: 'text/plain' }[a.type], size: a.text.length, data: a.text, meta: {} };
-    if (a.type === 'lottie' || a.type === 'json') {
-      let j;
-      try { j = JSON.parse(a.text); } catch (e) { throw new CommandError(`JSON invalide : ${e.message}`); }
-      if (a.type === 'lottie') {
-        if (!j.layers || !j.fr) throw new CommandError('Ce JSON ne ressemble pas à une animation Lottie (layers/fr manquants).');
-        asset.meta = { width: j.w, height: j.h, fps: j.fr, duration: (j.op - j.ip) / j.fr, layers: j.layers.length };
-      }
-    }
-    if (a.type === 'svg') {
-      if (!/<svg[\s>]/i.test(a.text)) throw new CommandError('Contenu SVG invalide (balise <svg> absente).');
-      const w = a.text.match(/\bwidth="([\d.]+)/), h = a.text.match(/\bheight="([\d.]+)/), vb = a.text.match(/viewBox="[\d.\s-]*?([\d.]+)\s+([\d.]+)"/);
-      asset.meta = { width: +(w?.[1] || vb?.[1] || 512), height: +(h?.[1] || vb?.[2] || 512) };
-    }
-    if (a.type === 'lut') { const cube = parseCube(a.text); asset.meta = { size: cube.size }; }
-    if (a.type === 'csv') asset.meta = { rows: a.text.trim().split(/\r?\n/).length };
+    const asset = { id: uid('ast'), type: a.type, name: a.name || `${a.type}-${ctx.project.assets.length + 1}`, ref: 'inline', mime: { svg: 'image/svg+xml', lottie: 'application/json', json: 'application/json', csv: 'text/csv', lut: 'text/plain' }[a.type], size: a.text.length, data: a.text, meta: textAssetMeta(a.type, a.text) };
     await ctx.services.assets?.registerInline?.(asset);
     ctx.project.assets.push(asset);
     return { id: asset.id, type: asset.type, name: asset.name, meta: asset.meta };

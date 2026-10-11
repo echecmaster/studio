@@ -1,0 +1,611 @@
+{
+  "id": "split-screen",
+  "name": "Écran partagé",
+  "description": "Comparaison avant/après en deux colonnes avec séparateur animé.",
+  "thumbTime": 2,
+  "project": {
+    "version": 1,
+    "id": "tpl_split-screen",
+    "meta": {
+      "name": "Écran partagé",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration": 6,
+      "background": "#000000",
+      "sampleRate": 48000
+    },
+    "assets": [],
+    "tracks": [
+      {
+        "id": "trk_miyl08yp4ru3v",
+        "type": "text",
+        "name": "Texte 2",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 0,
+        "color": "#24D26D",
+        "height": 48,
+        "groupId": null,
+        "collapsed": false
+      },
+      {
+        "id": "trk_miykyppiwls3s",
+        "type": "shape",
+        "name": "Formes 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 1,
+        "color": "#B05CFF",
+        "height": 48,
+        "groupId": null,
+        "collapsed": false
+      },
+      {
+        "id": "trk_miykv1mkzht3p",
+        "type": "video",
+        "name": "Vidéo 2",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 2,
+        "color": "#3D8BFF",
+        "height": 48,
+        "groupId": null,
+        "collapsed": false
+      },
+      {
+        "id": "trk_miykut8db9z3i",
+        "type": "text",
+        "name": "Texte 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 3,
+        "color": "#24D26D",
+        "height": 48
+      },
+      {
+        "id": "trk_miykuhagkg43j",
+        "type": "video",
+        "name": "Vidéo 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 4,
+        "color": "#3D8BFF",
+        "height": 48
+      },
+      {
+        "id": "trk_miyku3sighc3k",
+        "type": "audio",
+        "name": "Audio 1",
+        "locked": false,
+        "muted": false,
+        "solo": false,
+        "hidden": false,
+        "order": 5,
+        "color": "#E0A526",
+        "height": 48
+      }
+    ],
+    "clips": [
+      {
+        "id": "clp_miykv0s9b153l",
+        "trackId": "trk_miykuhagkg43j",
+        "kind": "generator",
+        "name": "Gauche (avant)",
+        "start": 0,
+        "duration": 6,
+        "transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "type": "noise",
+          "params": {
+            "type": "Perlin (valeur)",
+            "scale": 6,
+            "speed": 0.3,
+            "c1": "#202020",
+            "c2": "#5a5a5a",
+            "contrast": 1
+          },
+          "width": 1920,
+          "height": 1080
+        },
+        "effects": [
+          {
+            "id": "fx_miykvtwtd853n",
+            "type": "blackWhite",
+            "enabled": true,
+            "params": {
+              "red": 0.3,
+              "green": 0.59,
+              "blue": 0.11,
+              "tint": "#ffffff"
+            }
+          }
+        ],
+        "blendMode": "normal",
+        "keyframes": {},
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [
+          {
+            "id": "msk_miykvrfophm3m",
+            "type": "rect",
+            "x": -480,
+            "y": 0,
+            "width": 960,
+            "height": 1080,
+            "points": [],
+            "feather": 0,
+            "expansion": 0,
+            "invert": false,
+            "opacity": 1,
+            "mode": "add",
+            "enabled": true
+          }
+        ],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miykvk4ubn33o",
+        "trackId": "trk_miykv1mkzht3p",
+        "kind": "generator",
+        "name": "Droite (après)",
+        "start": 0,
+        "duration": 6,
+        "transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "type": "meshGradient",
+          "params": {
+            "c1": "#24d26d",
+            "c2": "#0b3dff",
+            "c3": "#ff3d8b",
+            "c4": "#050505",
+            "speed": 0.4,
+            "softness": 1
+          },
+          "width": 1920,
+          "height": 1080
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {},
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [
+          {
+            "id": "msk_miykwtoro483q",
+            "type": "rect",
+            "x": 480,
+            "y": 0,
+            "width": 960,
+            "height": 1080,
+            "points": [],
+            "feather": 0,
+            "expansion": 0,
+            "invert": false,
+            "opacity": 1,
+            "mode": "add",
+            "enabled": true
+          }
+        ],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miykyttgi443r",
+        "trackId": "trk_miykyppiwls3s",
+        "kind": "shape",
+        "name": "Séparateur",
+        "start": 0,
+        "duration": 6,
+        "transform": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "shape": "rect",
+          "width": 10,
+          "height": 1080,
+          "radius": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sides": 6,
+          "points": 5,
+          "innerRadius": 0.45,
+          "path": [],
+          "closed": true,
+          "fill": {
+            "type": "solid",
+            "color": "#24D26D",
+            "stops": [
+              {
+                "o": 0,
+                "c": "#24D26D"
+              },
+              {
+                "o": 1,
+                "c": "#0B3DFF"
+              }
+            ],
+            "angle": 90,
+            "enabled": true
+          },
+          "stroke": {
+            "enabled": false,
+            "color": "#FFFFFF",
+            "width": 4,
+            "dash": [],
+            "cap": "round",
+            "join": "round",
+            "align": "center"
+          },
+          "trimStart": 0,
+          "trimEnd": 1,
+          "trimOffset": 0,
+          "compound": null,
+          "morphTo": null,
+          "morph": 0
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {
+          "transform.scaleY": [
+            {
+              "t": 0,
+              "v": 0,
+              "easing": "easeOutBack",
+              "hold": false
+            },
+            {
+              "t": 0.6,
+              "v": 1,
+              "easing": "linear",
+              "hold": false
+            }
+          ],
+          "transform.scaleX": [
+            {
+              "t": 0,
+              "v": 1.4,
+              "easing": "easeOutCubic",
+              "hold": false
+            },
+            {
+              "t": 0.6,
+              "v": 1,
+              "easing": "linear",
+              "hold": false
+            }
+          ]
+        },
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miykzztfuqf3t",
+        "trackId": "trk_miykut8db9z3i",
+        "kind": "text",
+        "name": "AVANT",
+        "start": 0.5,
+        "duration": 5.5,
+        "transform": {
+          "x": -480,
+          "y": -400,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "text": "AVANT",
+          "fontFamily": "Inter",
+          "fontSize": 100,
+          "fontWeight": 900,
+          "italic": false,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "kerning": true,
+          "align": "center",
+          "color": "#EDEDED",
+          "textTransform": "none",
+          "fill": {
+            "type": "solid",
+            "stops": [
+              {
+                "o": 0,
+                "c": "#24D26D"
+              },
+              {
+                "o": 1,
+                "c": "#0B3DFF"
+              }
+            ],
+            "angle": 90
+          },
+          "stroke": {
+            "enabled": false,
+            "color": "#050505",
+            "width": 6
+          },
+          "shadow": {
+            "enabled": false,
+            "color": "#000000AA",
+            "blur": 20,
+            "x": 0,
+            "y": 8
+          },
+          "extrude": {
+            "enabled": false,
+            "depth": 14,
+            "color": "#0F3D22",
+            "angle": 135
+          },
+          "maxWidth": 0,
+          "onPath": null,
+          "animator": null,
+          "background": {
+            "enabled": false,
+            "color": "#050505CC",
+            "padding": 24,
+            "radius": 12
+          }
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {
+          "transform.y": [
+            {
+              "t": 0,
+              "v": -340,
+              "easing": "easeOutCubic",
+              "hold": false
+            },
+            {
+              "t": 0.6,
+              "v": -400,
+              "easing": "linear",
+              "hold": false
+            }
+          ],
+          "transform.opacity": [
+            {
+              "t": 0,
+              "v": 0,
+              "easing": "easeOutCubic",
+              "hold": false
+            },
+            {
+              "t": 0.6,
+              "v": 1,
+              "easing": "linear",
+              "hold": false
+            }
+          ]
+        },
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      },
+      {
+        "id": "clp_miyl0mktybk3u",
+        "trackId": "trk_miyl08yp4ru3v",
+        "kind": "text",
+        "name": "APRÈS",
+        "start": 0.5,
+        "duration": 5.5,
+        "transform": {
+          "x": 480,
+          "y": -400,
+          "z": 0,
+          "scale": 1,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "rotationX": 0,
+          "rotationY": 0,
+          "skewX": 0,
+          "skewY": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "opacity": 1
+        },
+        "props": {
+          "text": "APRÈS",
+          "fontFamily": "Inter",
+          "fontSize": 100,
+          "fontWeight": 900,
+          "italic": false,
+          "lineHeight": 1.15,
+          "letterSpacing": 0,
+          "kerning": true,
+          "align": "center",
+          "color": "#EDEDED",
+          "textTransform": "none",
+          "fill": {
+            "type": "solid",
+            "stops": [
+              {
+                "o": 0,
+                "c": "#24D26D"
+              },
+              {
+                "o": 1,
+                "c": "#0B3DFF"
+              }
+            ],
+            "angle": 90
+          },
+          "stroke": {
+            "enabled": false,
+            "color": "#050505",
+            "width": 6
+          },
+          "shadow": {
+            "enabled": false,
+            "color": "#000000AA",
+            "blur": 20,
+            "x": 0,
+            "y": 8
+          },
+          "extrude": {
+            "enabled": false,
+            "depth": 14,
+            "color": "#0F3D22",
+            "angle": 135
+          },
+          "maxWidth": 0,
+          "onPath": null,
+          "animator": null,
+          "background": {
+            "enabled": false,
+            "color": "#050505CC",
+            "padding": 24,
+            "radius": 12
+          }
+        },
+        "effects": [],
+        "blendMode": "normal",
+        "keyframes": {
+          "transform.y": [
+            {
+              "t": 0,
+              "v": -340,
+              "easing": "easeOutCubic",
+              "hold": false
+            },
+            {
+              "t": 0.6,
+              "v": -400,
+              "easing": "linear",
+              "hold": false
+            }
+          ],
+          "transform.opacity": [
+            {
+              "t": 0,
+              "v": 0,
+              "easing": "easeOutCubic",
+              "hold": false
+            },
+            {
+              "t": 0.6,
+              "v": 1,
+              "easing": "linear",
+              "hold": false
+            }
+          ]
+        },
+        "expressions": {},
+        "transitionIn": null,
+        "transitionOut": null,
+        "parentId": null,
+        "masks": [],
+        "inPoint": 0,
+        "speed": 1,
+        "reverse": false,
+        "matte": null,
+        "audioLinks": {},
+        "timeRemap": null
+      }
+    ],
+    "markers": [],
+    "workArea": {
+      "in": 0,
+      "out": 6
+    },
+    "presets": [],
+    "luts": []
+  }
+}

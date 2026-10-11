@@ -169,12 +169,14 @@ export default [
   // ---------------- Viewport / outils ----------------
   cmd('view.set', 'Options du viewport : zoom, guides, zones de sécurité, grille, règles, damier, mode propre, vue alpha, qualité, comparaison, isolation', 'Viewport options', args({
     zoom: { description: '"fit" ou facteur (1 = 100 %)' }, guides: S.bool('Guides'), safeZones: S.bool('Zones de sécurité'), safeZoneType: S.enm('Type de zone', ['title-action', '16:9', '9:16', '1:1', '4:5']), grid: S.bool('Grille'), rulers: S.bool('Règles'), checker: S.bool('Damier de transparence'), clean: S.bool('Aperçu propre (sans gizmos)'),
-    view: S.enm('Vue', ['color', 'alpha', 'histogram', 'waveform', 'vectorscope']), quality: S.enm('Qualité de preview', ['auto', 'full', 'half', 'quarter']), compare: { description: 'Comparaison avant/après : {clipId, effectId?, split} ou null' }, isolate: { type: ['string', 'null'], description: 'Isoler un clip' }, panX: S.num('Pan X'), panY: S.num('Pan Y'),
+    view: S.enm('Vue', ['color', 'alpha', 'histogram', 'waveform', 'vectorscope']), graphEditor: S.bool('Afficher l\'éditeur de courbes de la timeline'), graphProperty: { description: 'Propriété affichée dans l\'éditeur de courbes : {clipId, path, mode: "value"|"speed"}' }, quality: S.enm('Qualité de preview', ['auto', 'full', 'half', 'quarter']), compare: { description: 'Comparaison avant/après : {clipId, effectId?, split} ou null' }, isolate: { type: ['string', 'null'], description: 'Isoler un clip' }, panX: S.num('Pan X'), panY: S.num('Pan Y'),
   }), (ctx, a) => {
     const v = { ...ctx.app.viewport };
     for (const k of ['zoom', 'guides', 'safeZones', 'safeZoneType', 'grid', 'rulers', 'checker', 'clean', 'view', 'compare', 'isolate', 'panX', 'panY']) if (a[k] !== undefined) v[k] = a[k];
     const patch = { viewport: v };
     if (a.quality) patch.quality = a.quality;
+    if (a.graphEditor !== undefined) patch.graphEditor = a.graphEditor;
+    if (a.graphProperty !== undefined) patch.graphProperty = a.graphProperty;
     ctx.setApp(patch);
     return { viewport: v, quality: ctx.app.quality };
   }, { history: false }),
