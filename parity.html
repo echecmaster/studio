@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parité UI ⇄ MCP — Motion Studio</title>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    body { margin: 0; background: var(--bg); color: var(--text); font: 13px/1.5 var(--font); overflow: auto; }
+    main { max-width: 1200px; margin: auto; padding: 32px 20px 80px; }
+    h1 { color: var(--accent); margin: 0 0 6px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin: 18px 0; }
+    .card { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 12px; }
+    .card b { display: block; font-size: 24px; color: var(--accent); }
+    .card.ko b { color: var(--danger); }
+    table { margin-top: 10px; }
+    input { width: 100%; margin: 14px 0 0; }
+    code { font-family: var(--mono); color: var(--accent); }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Parité UI ⇄ MCP</h1>
+  <p class="muted">Chaque action de l'interface déclenche une commande du registre, exposée à l'identique via <code>window.motionAPI</code>, WebMCP et le serveur MCP Netlify. Ce tableau est vérifié automatiquement (scripts/build-parity.mjs, tests/parity.test.mjs) et recontrôlé ici en direct contre le registre chargé dans le navigateur.</p>
+  <div class="cards" id="cards"></div>
+  <h2>Actions de l'interface → commandes</h2>
+  <table class="parity" id="actions"><thead><tr><th>Action UI</th><th>Raccourci</th><th>Commande</th><th>Statut</th></tr></thead><tbody></tbody></table>
+  <h2>Toutes les commandes</h2>
+  <input class="input" id="q" placeholder="Filtrer…" aria-label="Filtrer les commandes">
+  <table class="parity" id="cmds"><thead><tr><th>Commande</th><th>Outil MCP</th><th>Env.</th><th>Accès UI</th><th>Statut</th></tr></thead><tbody></tbody></table>
+</main>
+<script type="module">
+import { PARITY } from './js/mcp/parity.generated.js';
+import { registry } from './js/core/commands/index.js';
+const esc = (s) => String(s).replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
+const live = registry.list();
+const liveNames = new Set(live.map((c) => c.name));
+const okActions = PARITY.actions.filter((a) => liveNames.has(a.command)).length;
+const cards = [
+  ['Commandes / outils MCP', live.length, true],
+  ['Avec accès UI direct', `${PARITY.stats.withUi}`, true],
+  ['Actions UI couvertes', `${okActions}/${PARITY.actions.length}`, okActions === PARITY.actions.length],
+  ['Références UI inconnues', PARITY.unknown.length, PARITY.unknown.length === 0],
+  ['Mutations hors commandes', PARITY.violations.length, PARITY.violations.length === 0],
+];
+document.getElementById('cards').innerHTML = cards.map(([l, v, ok]) => `<div class="card ${ok ? '' : 'ko'}"><b>${v}</b>${l}</div>`).join('');
+document.querySelector('#actions tbody').innerHTML = PARITY.actions.map((a) => `<tr><td>${esc(a.label)}</td><td><kbd>${esc(a.keys)}</kbd></td><td><code>${a.command}</code></td><td class="${liveNames.has(a.command) ? 'ok' : 'ko'}">${liveNames.has(a.command) ? '✓' : '✗'}</td></tr>`).join('');
+const rows = PARITY.rows;
+const draw = () => {
+  const q = document.getElementById('q').value.toLowerCase();
+  document.querySelector('#cmds tbody').innerHTML = rows.filter((r) => !q || `${r.command} ${r.title}`.toLowerCase().includes(q)).map((r) => `<tr><td><code>${r.command}</code><div class="hint">${esc(r.title)}</div></td><td><code>${r.tool}</code></td><td>${r.env === 'browser' ? 'onglet' : 'partout'}</td><td>${r.uiRefs ? `${r.uiRefs} point(s)${r.ui.length ? ` — ${esc(r.ui.join(' · '))}` : ''}` : 'palette Ctrl+K'}</td><td class="${liveNames.has(r.command) ? 'ok' : 'ko'}">${liveNames.has(r.command) ? '✓' : '✗'}</td></tr>`).join('');
+};
+document.getElementById('q').addEventListener('input', draw);
+draw();
+</script>
+</body>
+</html>

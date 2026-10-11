@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Non-régression visuelle</title><link rel="stylesheet" href="../css/fonts.css"></head>
+<body style="background:#050505;color:#eee;font-family:monospace"><pre id="o">…</pre>
+<script type="module">
+// Rend des scènes de référence (templates) à des instants fixes et calcule une empreinte par image.
+// Les empreintes de référence sont dans tests/visual-hashes.json (régénérer : node scripts/browser-tests.mjs --update).
+import { Renderer } from '../js/render/renderer.js';
+import { TEMPLATES } from '../js/templates/templates.generated.js';
+await document.fonts.load('900 40px Inter'); await document.fonts.load('400 40px "JetBrains Mono"'); await document.fonts.ready;
+const W = 160, H = 90;
+const c = document.createElement('canvas'); c.width = W; c.height = H;
+const r = new Renderer(c, { offscreen: true });
+const gl = r.gl;
+const px = new Uint8Array(W * H * 4);
+function hash() {
+  gl.readPixels(0, 0, W, H, gl.RGBA, gl.UNSIGNED_BYTE, px);
+  let h = 2166136261 >>> 0;
+  for (let i = 0; i < px.length; i++) { h ^= px[i] >> 3; h = Math.imul(h, 16777619) >>> 0; }   // quantification 5 bits
+  return h.toString(16).padStart(8, '0');
+}
+const out = {};
+const det = [];
+for (const t of TEMPLATES.slice(0, 6)) {
+  for (const time of [0.5, t.project.meta.duration / 2]) {
+    const p = t.project;
+    r.resize(p.meta.width > p.meta.height ? W : Math.round(H * p.meta.width / p.meta.height), H);
+    r.render(p, time, {}); const a = hash();
+    r.render(p, time, {}); const b = hash();   // déterminisme : même entrée = même image
+    out[`${t.id}@${time}`] = a;
+    if (a !== b) det.push(`${t.id}@${time}`);
+  }
+}
+window.__result = { hashes: out, nonDeterministic: det };
+document.getElementById('o').textContent = JSON.stringify(window.__result, null, 2);
+</script></body></html>

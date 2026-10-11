@@ -258,7 +258,7 @@ export class Exporter {
       frame.close();
       while (venc.encodeQueueSize > 6) await new Promise((res) => setTimeout(res, 1));
       this.progress(job, i + 1);
-      if (i % 2 === 0) await yieldUI();
+      await yieldUI();
     }
     await venc.flush();
     venc.close();
