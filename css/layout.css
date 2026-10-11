@@ -15,7 +15,12 @@ button, input, select, textarea { font: inherit; color: inherit; }
   grid-template-rows: var(--topbar-h) minmax(200px, 1fr) 5px var(--transport-h) var(--timeline-h, 280px);
   grid-template-columns: 100%;
 }
-#topbar { grid-row: 1; }
+#topbar { grid-row: 1; min-width: 0; overflow: hidden; }
+#left { grid-column: 1; }
+#split-left { grid-column: 2; }
+#center { grid-column: 3; }
+#split-right { grid-column: 4; }
+#right { grid-column: 5; }
 #workspace {
   grid-row: 2;
   display: grid;
@@ -57,6 +62,11 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .splitter.v { display: none; }
   .mobile-banner { display: flex; }
   .hide-mobile { display: none !important; }
+}
+@media (max-width: 960px) {
+  #export-btn span { display: none; }
+  #topbar .chip { display: none; }
+  #project-name { width: 120px; }
 }
 @media (max-width: 700px) {
   #app { grid-template-rows: var(--topbar-h) minmax(160px, 1fr) 5px var(--transport-h) var(--timeline-h, 200px); }

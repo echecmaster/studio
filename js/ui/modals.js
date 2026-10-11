@@ -44,7 +44,7 @@ export async function exportDialog(app) {
   const m = openModal({
     title: 'Exporter', iconName: 'export', wide: false,
     body: [capsInfo, h('div', { class: 'grid2' }, F('Format', fmt), F('Résolution', res), F('Images/s', fps), F('Qualité', quality), F('Débit vidéo (Mbps)', bitrate), F('Plage', range), F('Encodeur', hw), F('Nom du fichier', name)),
-      h('div', { class: 'row' }, h('label', { class: 'row' }, audio, ' Inclure l\'audio'), h('label', { class: 'row' }, mb, ' Flou de mouvement réel'), h('label', { class: 'row', title: caps.fileSystemAccess ? '' : 'Non pris en charge par ce navigateur' }, stream, ' Écrire directement sur le disque')),
+      h('div', { class: 'row', style: { flexWrap: 'wrap', gap: '4px 16px' } }, h('label', { class: 'row' }, audio, ' Inclure l\'audio'), h('label', { class: 'row' }, mb, ' Flou de mouvement réel'), h('label', { class: 'row', title: caps.fileSystemAccess ? '' : 'Non pris en charge par ce navigateur' }, stream, ' Écrire directement sur le disque')),
       est, h('div', { class: 'hint' }, 'Le rendu est image par image et déterministe : il est identique à la preview et ne dépend pas de la vitesse de votre machine. Gardez l\'onglet ouvert pendant l\'export.')],
     footer: [btn('Annuler', () => m.close()), btn('Exporter', async () => { const r = await bus.run('export.start', opts()); if (r.ok) m.close(); else toast(r.error, 'error'); }, { cls: 'primary', iconName: 'export', cmd: 'export.start' })],
   });
